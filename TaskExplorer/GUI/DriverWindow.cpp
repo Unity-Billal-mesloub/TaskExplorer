@@ -12,40 +12,11 @@ CDriverWindow::CDriverWindow(QWidget *parent)
 	this->setCentralWidget(centralWidget);
 	this->setWindowTitle("Task Explorer - Driver Options");
 
-	ui.securityLevel->setEnabled(false);
-
-	connect(ui.btnStart, SIGNAL(pressed()), this, SLOT(OnStop()));
-	connect(ui.btnConnect, SIGNAL(pressed()), this, SLOT(OnConnect()));
 	connect(ui.buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
 	connect(ui.buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
 
-	ui.chkUseDriver->setChecked(theConf->GetBool("Options/UseDriver", true));
-
-	ui.fileName->addItem(tr("(Auto Selection)"), "");
-	QDir dir(QApplication::applicationDirPath());
-	foreach(const QString& FileName, dir.entryList(QStringList() << "*.sys", QDir::Files))
-		ui.fileName->addItem(FileName, FileName);
-
-	if (theConf->GetString("Options/DriverFile").isEmpty())
-	{
-		ui.autoSelection->setVisible(true);
-		ui.deviceName->setReadOnly(true);
-
-		QPair<QString, QString> Driver = ((CWindowsAPI*)theAPI)->SelectDriver();
-		ui.fileName->setCurrentIndex(ui.fileName->findData(Driver.second));
-		ui.deviceName->setText(Driver.first);
-	}
-	else
-	{
-		ui.autoSelection->setVisible(false);
-		ui.deviceName->setReadOnly(false);
-
-		ui.fileName->setCurrentIndex(ui.fileName->findData(((CWindowsAPI*)theAPI)->GetDriverFileName()));
-		ui.deviceName->setText(((CWindowsAPI*)theAPI)->GetDriverDeviceName());
-	}
-
-	m_HoldValues = false;
-	connect(ui.fileName, SIGNAL(currentIndexChanged(int)), this, SLOT(OnDriverFile()));
+	ui.chkUseDriver->setChecked(theConf->GetBool("OptionsKSI/KsiEnable", true));
+	ui.deviceName->setText(theConf->GetString("OptionsKSI/DeviceName", "KTaskExplorer"));
 
 	Refresh();
 
@@ -56,10 +27,9 @@ CDriverWindow::CDriverWindow(QWidget *parent)
 	else
 		ui.signingPolicy->setText(tr("Signature Required"));
 	
-
 	restoreGeometry(theConf->GetBlob("DriverWindow/Window_Geometry"));
 
-	m_TimerId = startTimer(1000);
+	m_TimerId = startTimer(250);
 }
 
 CDriverWindow::~CDriverWindow()
@@ -77,18 +47,8 @@ void CDriverWindow::closeEvent(QCloseEvent *e)
 
 void CDriverWindow::accept()
 {
-	theConf->SetValue("Options/UseDriver", ui.chkUseDriver->isChecked());
-
-	if (ui.autoSelection->isVisible())
-	{
-		theConf->SetValue("Options/DriverFile", "");
-		theConf->SetValue("Options/DriverDevice", "");
-	}
-	else
-	{
-		theConf->SetValue("Options/DriverFile", ui.fileName->currentText());
-		theConf->SetValue("Options/DriverDevice", ui.deviceName->text());
-	}
+	theConf->SetValue("OptionsKSI/KsiEnable", ui.chkUseDriver->isChecked());
+	//theConf->SetValue("OptionsKSI/DeviceName", ui.deviceName->text());
 
 	this->close();
 }
@@ -109,109 +69,47 @@ void CDriverWindow::timerEvent(QTimerEvent *e)
 	Refresh();
 }
 
-void CDriverWindow::OnDriverFile()
-{
-	if (m_HoldValues)
-		return;
-
-	QString FileName = ui.fileName->currentData().toString();
-	if (FileName.isEmpty())
-	{
-		ui.autoSelection->setVisible(true);
-		ui.deviceName->setReadOnly(true);
-
-		m_HoldValues = true;
-		QPair<QString, QString> Driver = ((CWindowsAPI*)theAPI)->SelectDriver();
-		ui.fileName->setCurrentIndex(ui.fileName->findData(Driver.second));
-		ui.deviceName->setText(Driver.first);
-		m_HoldValues = false;
-	}
-	else
-	{
-		ui.autoSelection->setVisible(false);
-		ui.deviceName->setReadOnly(false);
-
-		if (FileName.contains("systeminformer", Qt::CaseInsensitive))
-			ui.deviceName->setText("KSystemInformer");
-		else
-			ui.deviceName->setText("");
-	}
-}
-
 void CDriverWindow::Refresh()
 {
-	CServicePtr pService = theAPI->GetService(ui.deviceName->text());
-	if (pService.isNull())
-	{
-		ui.btnStart->setEnabled(false);
-		ui.btnStart->setText(tr("Start"));
-		ui.driverStatus->setText(tr("Not installed"));
-		ui.driverStatus->setToolTip("");
-	}
-	else
+	if (CServicePtr pService = theAPI->GetService(ui.deviceName->text()))
 	{
 		ui.driverStatus->setText(pService->GetStateString());
 		ui.driverStatus->setToolTip(pService->GetFileName());
-		if (pService->IsStopped())
-		{
-			ui.btnStart->setText(tr("Start"));
-			ui.btnStart->setEnabled(true); // theAPI->RootAvaiable()
-		}
-		else
-		{
-			ui.btnStart->setText(tr("Stop"));
-			if (pService->IsRunning(true))
-				ui.btnStart->setEnabled(true); // theAPI->RootAvaiable()
-			else
-				ui.btnStart->setEnabled(false);
-		}
+	}
+	else
+	{
+		ui.driverStatus->setText(tr("Not installed"));
+		ui.driverStatus->setToolTip("");
 	}
 
 	if (KphCommsIsConnected())
 	{
-		ui.btnConnect->setEnabled(true);
-		ui.btnConnect->setText(tr("Disconnect"));
-
 		ui.connection->setText(tr("Connected"));
 
-		ui.verification->setText(QString("%1").arg(KsiLevel()));
+		if(g_KsiDynDataLoaded)
+			ui.dyn_data->setText(tr("DynData loaded"));
+		else
+			ui.dyn_data->setText(tr("DynData NOT loaded"));
+
+		QString sLevel;
+		KPH_LEVEL level = KphLevelEx(FALSE);
+		switch (level)
+		{
+		case KphLevelNone: sLevel = tr("None"); break;
+		case KphLevelMin: sLevel = tr("Minimal"); break;
+		case KphLevelLow: sLevel = tr("Low"); break;
+		case KphLevelMed: sLevel = tr("Medium"); break;
+		case KphLevelHigh: sLevel = tr("High"); break;
+		case KphLevelMax: sLevel = tr("Maximum"); break;
+		}
+		ui.verification->setText(sLevel);
 	}
 	else
 	{
-		ui.btnConnect->setEnabled((!pService.isNull() || !ui.fileName->currentText().isEmpty()) && !ui.deviceName->text().isEmpty()); // theAPI->RootAvaiable()
-		ui.btnConnect->setText(pService.isNull() ? tr("Install") : tr("Connect"));
+		ui.connection->setText(tr("Disconnected"));
 
-		if (quint32 Status = ((CWindowsAPI*)theAPI)->GetDriverStatus())
-			ui.connection->setText(tr("Error: 0x%1").arg(Status, 8, 16, QChar('0')));
-		else
-			ui.connection->setText(tr("Disconnected"));
+		ui.dyn_data->setText(tr("N/A"));
 
 		ui.verification->setText(tr("N/A"));
-	}
-}
-
-void CDriverWindow::OnConnect()
-{
-	if (KphCommsIsConnected())
-	{
-		KphCommsStop();
-	}
-	else
-	{
-		STATUS Status = ((CWindowsAPI*)theAPI)->InitDriver(ui.deviceName->text(), ui.fileName->currentText());
-		if (Status.IsError())
-			QMessageBox::critical(this, "Task Explorer", Status.GetText());
-	}
-}
-
-void CDriverWindow::OnStop()
-{
-	CServicePtr pService = theAPI->GetService(ui.deviceName->text());
-	if (!pService.isNull())
-	{
-		if (pService->IsRunning(true))
-			pService->Stop();
-		else if (pService->IsStopped())
-			pService->Start();
 	}
 }

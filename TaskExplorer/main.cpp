@@ -121,10 +121,22 @@ int main(int argc, char *argv[])
 	}
 	theConf = new CSettings(AppDir, "TaskExplorer", "Xanasoft");
 
-#ifndef USE_TASK_HELPER
-	InitPH(bSvc);
-#else
 	InitPH();
+
+#ifndef USE_TASK_HELPER
+	if (bSvc) 
+	{
+		HANDLE tokenHandle; // Enable some required privileges.
+		if (NT_SUCCESS(PhOpenProcessToken(NtCurrentProcess(), TOKEN_ADJUST_PRIVILEGES, &tokenHandle)))
+		{
+			PhSetTokenPrivilege2(tokenHandle, SE_ASSIGNPRIMARYTOKEN_PRIVILEGE, SE_PRIVILEGE_ENABLED);
+			PhSetTokenPrivilege2(tokenHandle, SE_INCREASE_QUOTA_PRIVILEGE, SE_PRIVILEGE_ENABLED);
+			PhSetTokenPrivilege2(tokenHandle, SE_BACKUP_PRIVILEGE, SE_PRIVILEGE_ENABLED);
+			PhSetTokenPrivilege2(tokenHandle, SE_RESTORE_PRIVILEGE, SE_PRIVILEGE_ENABLED);
+			PhSetTokenPrivilege2(tokenHandle, SE_IMPERSONATE_PRIVILEGE, SE_PRIVILEGE_ENABLED);
+			NtClose(tokenHandle);
+		}
+	}
 #endif
 
 	STATUS DrvStatus = OK;

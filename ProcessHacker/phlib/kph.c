@@ -286,6 +286,16 @@ NTSTATUS KphSetParameters(
             goto CleanupExit;
     }
 
+#ifdef IS_KTE
+    if (Config->ClientPath)
+    {
+        status = PhSetValueKeyStringZ(parametersKeyHandle, L"ClientPath", Config->ClientPath);
+
+        if (!NT_SUCCESS(status))
+            goto CleanupExit;
+    }
+#endif
+
     // Put more parameters here...
 
     status = STATUS_SUCCESS;

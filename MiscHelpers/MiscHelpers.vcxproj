@@ -350,6 +350,7 @@
     <ClCompile Include="Common\ListItemModel.cpp" />
     <ClCompile Include="Common\MT\ThreadLock.cpp" />
     <ClCompile Include="Common\MultiLineInputDialog.cpp" />
+    <ClCompile Include="Common\NetworkAccessManager.cpp" />
     <ClCompile Include="Common\OtherFunctions.cpp" />
     <ClCompile Include="Common\PanelView.cpp" />
     <ClCompile Include="Common\qRC4.cpp" />
@@ -424,6 +425,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Common\MT\ThreadLock.h" />
+    <QtMoc Include="Common\NetworkAccessManager.h" />
     <ClInclude Include="Common\OtherFunctions.h" />
     <ClInclude Include="Common\qRC4.h" />
     <ClInclude Include="Common\qzlib.h">

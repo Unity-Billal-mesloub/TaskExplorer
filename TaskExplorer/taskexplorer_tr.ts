@@ -363,73 +363,106 @@
 <context>
     <name>CDriverWindow</name>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="24"/>
         <source>(Auto Selection)</source>
-        <translation>(Oto Seçim)</translation>
+        <translation type="vanished">(Oto Seçim)</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="53"/>
+        <location filename="GUI/DriverWindow.cpp" line="24"/>
         <source>Test Signing Enabled</source>
         <translation>Test İmzalama Etkin</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="55"/>
+        <location filename="GUI/DriverWindow.cpp" line="26"/>
         <source>Signature Required (CKS Enabled)</source>
         <translation>İmza Gerekli (CKS Etkin)</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="57"/>
+        <location filename="GUI/DriverWindow.cpp" line="28"/>
         <source>Signature Required</source>
         <translation>İmza Gerekli</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="147"/>
-        <location filename="GUI/DriverWindow.cpp" line="157"/>
-        <source>Start</source>
-        <translation>Başlat</translation>
+        <location filename="GUI/DriverWindow.cpp" line="90"/>
+        <source>DynData loaded</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="148"/>
+        <location filename="GUI/DriverWindow.cpp" line="92"/>
+        <source>DynData NOT loaded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/DriverWindow.cpp" line="98"/>
+        <source>None</source>
+        <translation type="unfinished">Hiçbiri</translation>
+    </message>
+    <message>
+        <location filename="GUI/DriverWindow.cpp" line="99"/>
+        <source>Minimal</source>
+        <translation type="unfinished">Asgari</translation>
+    </message>
+    <message>
+        <location filename="GUI/DriverWindow.cpp" line="100"/>
+        <source>Low</source>
+        <translation type="unfinished">Düşük</translation>
+    </message>
+    <message>
+        <location filename="GUI/DriverWindow.cpp" line="101"/>
+        <source>Medium</source>
+        <translation type="unfinished">Orta</translation>
+    </message>
+    <message>
+        <location filename="GUI/DriverWindow.cpp" line="102"/>
+        <source>High</source>
+        <translation type="unfinished">Yüksek</translation>
+    </message>
+    <message>
+        <location filename="GUI/DriverWindow.cpp" line="103"/>
+        <source>Maximum</source>
+        <translation type="unfinished">En Yüksek</translation>
+    </message>
+    <message>
+        <source>Start</source>
+        <translation type="vanished">Başlat</translation>
+    </message>
+    <message>
+        <location filename="GUI/DriverWindow.cpp" line="81"/>
         <source>Not installed</source>
         <translation>Kurulu değil</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="162"/>
         <source>Stop</source>
-        <translation>Durdur</translation>
+        <translation type="vanished">Durdur</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="173"/>
         <source>Disconnect</source>
-        <translation>Bağlantıyı kes</translation>
+        <translation type="vanished">Bağlantıyı kes</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="175"/>
+        <location filename="GUI/DriverWindow.cpp" line="87"/>
         <source>Connected</source>
         <translation>Bağlandı</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="182"/>
         <source>Install</source>
-        <translation>Kur</translation>
+        <translation type="vanished">Kur</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="182"/>
         <source>Connect</source>
-        <translation>Bağla</translation>
+        <translation type="vanished">Bağla</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="185"/>
         <source>Error: 0x%1</source>
-        <translation>Hata: 0x%1</translation>
+        <translation type="vanished">Hata: 0x%1</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="187"/>
+        <location filename="GUI/DriverWindow.cpp" line="109"/>
         <source>Disconnected</source>
         <translation>Bağlantı kesildi</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="189"/>
+        <location filename="GUI/DriverWindow.cpp" line="111"/>
+        <location filename="GUI/DriverWindow.cpp" line="113"/>
         <source>N/A</source>
         <translation>Yok</translation>
     </message>
@@ -5366,7 +5399,7 @@ Kısmenİşaretli kutu yalnızca iş parçacığı std::list kısmına uygulanı
 <context>
     <name>CTaskExplorer</name>
     <message>
-        <location filename="main.cpp" line="331"/>
+        <location filename="main.cpp" line="343"/>
         <source>You are attempting to run the 32-bit version of Task Explorer on 64-bit Windows. Most features will not work correctly.
 
 Please run the 64-bit version of Task Explorer instead.</source>
@@ -5420,39 +5453,34 @@ Lütfen bunun yerine Task Explorer uygulamasının 64 bit sürümünü çalışt
         <translation> (Yönetici)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="116"/>
         <source>None</source>
-        <translation>Hiçbiri</translation>
+        <translation type="vanished">Hiçbiri</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="117"/>
         <source>Minimal</source>
-        <translation>Asgari</translation>
+        <translation type="vanished">Asgari</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="118"/>
         <source>Low</source>
-        <translation>Düşük</translation>
+        <translation type="vanished">Düşük</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="119"/>
         <source>Medium</source>
-        <translation>Orta</translation>
+        <translation type="vanished">Orta</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="120"/>
         <source>High</source>
-        <translation>Yüksek</translation>
+        <translation type="vanished">Yüksek</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="121"/>
         <source>Maximum</source>
-        <translation>En Yüksek</translation>
+        <translation type="vanished">En Yüksek</translation>
     </message>
     <message>
         <location filename="GUI/TaskExplorer.cpp" line="123"/>
-        <source> - [KSI Level %1]</source>
-        <translation> - [KSI Seviyesi %1]</translation>
+        <source> - [%1KSI%2]</source>
+        <oldsource> - [KSI Level %1]</oldsource>
+        <translation type="unfinished"> - [KSI Seviyesi %1]</translation>
     </message>
     <message>
         <location filename="GUI/TaskExplorer.cpp" line="131"/>
@@ -5561,7 +5589,7 @@ Lütfen bunun yerine Task Explorer uygulamasının 64 bit sürümünü çalışt
     </message>
     <message>
         <location filename="GUI/TaskExplorer.cpp" line="285"/>
-        <location filename="GUI/TaskExplorer.cpp" line="453"/>
+        <location filename="GUI/TaskExplorer.cpp" line="452"/>
         <source>Filter Processes</source>
         <translation>İşlemleri Filtrele</translation>
     </message>
@@ -5626,470 +5654,510 @@ Lütfen bunun yerine Task Explorer uygulamasının 64 bit sürümünü çalışt
         <translation>Ayarlar</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="321"/>
+        <location filename="GUI/TaskExplorer.cpp" line="320"/>
         <source>Auto Run</source>
         <translation>Oto Başlat</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="324"/>
+        <location filename="GUI/TaskExplorer.cpp" line="323"/>
         <source>Skip UAC</source>
         <translation>UAC Atla</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="330"/>
+        <location filename="GUI/TaskExplorer.cpp" line="329"/>
         <source>&amp;Tools</source>
         <translation>&amp;Araçlar</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="331"/>
+        <location filename="GUI/TaskExplorer.cpp" line="330"/>
         <source>&amp;Services</source>
         <translation>&amp;Hizmetler</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="332"/>
+        <location filename="GUI/TaskExplorer.cpp" line="331"/>
         <source>Create new Service</source>
         <translation>Yeni Hizmet oluştur</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="334"/>
+        <location filename="GUI/TaskExplorer.cpp" line="333"/>
         <source>ReLoad all Service</source>
         <translation>Tüm Hizmetleri yeniden yükle</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="336"/>
+        <location filename="GUI/TaskExplorer.cpp" line="335"/>
         <source>Service Control Manager Permissions</source>
         <translation>Hizmet Kontrol Yöneticisi İzinleri</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="338"/>
+        <location filename="GUI/TaskExplorer.cpp" line="337"/>
         <source>&amp;Free Memory</source>
         <translation>&amp;Bellek Serbest Bırakma</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="339"/>
+        <location filename="GUI/TaskExplorer.cpp" line="338"/>
         <source>Empty Working set</source>
         <translation>Çalışma Kümesini boşalt</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="340"/>
+        <location filename="GUI/TaskExplorer.cpp" line="339"/>
         <source>Empty Modified pages</source>
         <translation>Değiştirilmiş sayfaları boşalt</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1502"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1501"/>
         <source>Found %1 hidden processes and added them to the process std::list.</source>
         <translation>%1 gizli işlem bulundu ve işlem std::list&apos;e eklendi.</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="344"/>
+        <location filename="GUI/TaskExplorer.cpp" line="343"/>
         <source>Combine Pages</source>
         <translation>Sayfaları Birleştir</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="347"/>
+        <location filename="GUI/TaskExplorer.cpp" line="116"/>
+        <source>---</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/TaskExplorer.cpp" line="117"/>
+        <source>--</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/TaskExplorer.cpp" line="118"/>
+        <source>-</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/TaskExplorer.cpp" line="119"/>
+        <source>~</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/TaskExplorer.cpp" line="120"/>
+        <source>+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/TaskExplorer.cpp" line="121"/>
+        <source>++</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/TaskExplorer.cpp" line="123"/>
+        <source>Limited </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/TaskExplorer.cpp" line="312"/>
+        <source>Driver Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/TaskExplorer.cpp" line="346"/>
         <source>Persistence Options</source>
         <translation>Kalıcı Ön Ayarlar</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="350"/>
+        <location filename="GUI/TaskExplorer.cpp" line="349"/>
         <source>Flush Dns Cache</source>
         <translation>DNS Önbelleğini Boşalt</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="352"/>
+        <location filename="GUI/TaskExplorer.cpp" line="351"/>
         <source>Security Explorer</source>
         <translation>Güvenlik Gezgini</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="358"/>
+        <location filename="GUI/TaskExplorer.cpp" line="357"/>
         <source>Use Driver to Monitor System</source>
         <translation>Sistemi İzlemek için Sürücüyü Kullan</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="361"/>
+        <location filename="GUI/TaskExplorer.cpp" line="360"/>
         <source>Monitor ETW Events</source>
         <translation>ETW Olaylarını İzle</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="366"/>
+        <location filename="GUI/TaskExplorer.cpp" line="365"/>
         <source>Monitor Windows Firewall</source>
         <translation>Windows Güvenlik Duvarını İzle</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="372"/>
-        <location filename="GUI/TaskExplorer.cpp" line="470"/>
+        <location filename="GUI/TaskExplorer.cpp" line="371"/>
+        <location filename="GUI/TaskExplorer.cpp" line="469"/>
         <source>Monitor Debug Output</source>
         <translation>Hata Ayıklama Çıktısını İzle</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="388"/>
+        <location filename="GUI/TaskExplorer.cpp" line="387"/>
         <source>&amp;Help</source>
         <translation>&amp;Yardım</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="389"/>
+        <location filename="GUI/TaskExplorer.cpp" line="388"/>
         <source>Support TaskExplorer on Patreon</source>
         <translation>Patreon&apos;da TaskExplorer&apos;ı destekleyin</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="392"/>
+        <location filename="GUI/TaskExplorer.cpp" line="391"/>
         <source>About ProcessHacker Library</source>
         <translation>ProcessHacker Kütüphanesi Hakkında</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="394"/>
+        <location filename="GUI/TaskExplorer.cpp" line="393"/>
         <source>About the Qt Framework</source>
         <translation>Qt Framework Hakkında</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="396"/>
-        <location filename="GUI/TaskExplorer.cpp" line="1892"/>
+        <location filename="GUI/TaskExplorer.cpp" line="395"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1891"/>
         <source>About TaskExplorer</source>
         <translation>TaskExplorer Hakkında</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="409"/>
+        <location filename="GUI/TaskExplorer.cpp" line="408"/>
         <source>Refresh Now/Reset Hold</source>
         <translation>Şimdi Yenile/Tutulanları Sıfırla</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="414"/>
+        <location filename="GUI/TaskExplorer.cpp" line="413"/>
         <source>Extremly fast (30Hz)</source>
         <translation>Son derece hızlı (30Hz)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="415"/>
+        <location filename="GUI/TaskExplorer.cpp" line="414"/>
         <source>Ultra fast (0.1s)</source>
         <translation>Ultra hızlı (0,1sn)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="416"/>
+        <location filename="GUI/TaskExplorer.cpp" line="415"/>
         <source>Very fast (0.25s)</source>
         <translation>Çok hızlı (0.25sn)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="417"/>
+        <location filename="GUI/TaskExplorer.cpp" line="416"/>
         <source>Fast (0.5s)</source>
         <translation>Hızlı (0.5sn)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="418"/>
+        <location filename="GUI/TaskExplorer.cpp" line="417"/>
         <source>Normal (1s)</source>
         <translation>Normal (1s)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="419"/>
+        <location filename="GUI/TaskExplorer.cpp" line="418"/>
         <source>Slow (2s)</source>
         <translation>Yavaş (2s)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="420"/>
+        <location filename="GUI/TaskExplorer.cpp" line="419"/>
         <source>Very slow (5s)</source>
         <translation>Çok yavaş (5s)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="421"/>
+        <location filename="GUI/TaskExplorer.cpp" line="420"/>
         <source>Extremely slow (10s)</source>
         <translation>Son derece yavaş (10s)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="431"/>
+        <location filename="GUI/TaskExplorer.cpp" line="430"/>
         <source>Hold ALL removed items</source>
         <translation>Tüm kaldırılan öğeleri tut</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="436"/>
+        <location filename="GUI/TaskExplorer.cpp" line="435"/>
         <source>Short persistence (2.5s)</source>
         <translation>Kısa süreli kalıcılık (2,5sn)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="437"/>
+        <location filename="GUI/TaskExplorer.cpp" line="436"/>
         <source>Normal persistence (5s)</source>
         <translation>Normal süreli kalıcılık (5sn)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="438"/>
+        <location filename="GUI/TaskExplorer.cpp" line="437"/>
         <source>Long persistence (10s)</source>
         <translation>Uzun süreli kalıcılık (10sn)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="439"/>
+        <location filename="GUI/TaskExplorer.cpp" line="438"/>
         <source>Very long persistence (60s)</source>
         <translation>Çok uzun süreli kalıcılık (60sn)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="440"/>
+        <location filename="GUI/TaskExplorer.cpp" line="439"/>
         <source>Extremely long persistence (5m)</source>
         <translation>Son derece uzun süreli kalıcılık (5dk)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="441"/>
+        <location filename="GUI/TaskExplorer.cpp" line="440"/>
         <source>Pseudo static persistence (1h)</source>
         <translation>Sahte statik süreli kalıcılık (1sa)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="488"/>
+        <location filename="GUI/TaskExplorer.cpp" line="487"/>
         <source>Search...</source>
         <translation>Ara...</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="612"/>
+        <location filename="GUI/TaskExplorer.cpp" line="611"/>
         <source>TaskExplorer is ready...</source>
         <translation>TaskExplorer hazır...</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="712"/>
+        <location filename="GUI/TaskExplorer.cpp" line="711"/>
         <source>Do you want to close TaskExplorer?</source>
         <translation>TaskExplorer&apos;ı kapatmak istiyor musunuz?</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="829"/>
+        <location filename="GUI/TaskExplorer.cpp" line="828"/>
         <source>CPU: %1%    </source>
         <translation>CPU: %1%    </translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="839"/>
+        <location filename="GUI/TaskExplorer.cpp" line="838"/>
         <source>GPU-%1: %2%    </source>
         <translation>GPU-%1: %2%    </translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="856"/>
+        <location filename="GUI/TaskExplorer.cpp" line="855"/>
         <source>Memory: %1/%2/(%3 + %4)    </source>
         <translation>Bellek: %1/%2/(%3 + %4)    </translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="858"/>
+        <location filename="GUI/TaskExplorer.cpp" line="857"/>
         <source>Memory: %1/%2/%3    </source>
         <translation>Bellek: %1/%2/%3    </translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="861"/>
+        <location filename="GUI/TaskExplorer.cpp" line="860"/>
         <source>Installed: %1</source>
         <translation>Takılı: %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="862"/>
+        <location filename="GUI/TaskExplorer.cpp" line="861"/>
         <source>Swap: %1</source>
         <translation>Takas: %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="863"/>
+        <location filename="GUI/TaskExplorer.cpp" line="862"/>
         <source>Commited: %1</source>
         <translation>Adanmış: %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="864"/>
+        <location filename="GUI/TaskExplorer.cpp" line="863"/>
         <source>Physical: %1</source>
         <translation>Fiziksel: %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="871"/>
+        <location filename="GUI/TaskExplorer.cpp" line="870"/>
         <source>R: %1</source>
         <translation>Okuma: %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="873"/>
+        <location filename="GUI/TaskExplorer.cpp" line="872"/>
         <source>W: %1</source>
         <translation>Yazma: %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="877"/>
+        <location filename="GUI/TaskExplorer.cpp" line="876"/>
         <source>FileIO; Read: %1; Write: %2; Other: %3</source>
         <translation>DosyaGÇ; Okuma: %1; Yazma: %2; Diğer: %3</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="878"/>
+        <location filename="GUI/TaskExplorer.cpp" line="877"/>
         <source>MMapIO; Read: %1; Write: %2</source>
         <translation>BelEşGÇ; Okuma: %1; Yazma: %2</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="881"/>
+        <location filename="GUI/TaskExplorer.cpp" line="880"/>
         <source>DiskIO; Read: %1; Write: %2</source>
         <translation>DiskGÇ; Okuma: %1; Yazma: %2</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="897"/>
+        <location filename="GUI/TaskExplorer.cpp" line="896"/>
         <source>TCP/IP; Download: %1; Upload: %2</source>
         <translation>TCP/IP; İndirme: %1; Yükleme: %2</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="898"/>
+        <location filename="GUI/TaskExplorer.cpp" line="897"/>
         <source>VPN/RAS; Download: %1; Upload: %2</source>
         <translation>VPN/RAS; İndirme: %1; Yükleme: %2</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1097"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1096"/>
         <source>Do you really want to %1?</source>
         <translation>Gerçekten %1 istiyor musun?</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1155"/>
-        <location filename="GUI/TaskExplorer.cpp" line="1242"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1154"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1241"/>
         <source>Failed to %1, due to: %2</source>
         <translation>%2 yüzünden %1 başarısız oldu</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1166"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1165"/>
         <source>Users (%1)</source>
         <translation>Kullanıcılar (%1)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1180"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1179"/>
         <source>Connect</source>
         <translation>Bağlan</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1181"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1180"/>
         <source>Disconnect</source>
         <translation>Bağlantıyı Kes</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1182"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1181"/>
         <source>Logoff</source>
         <translation>Oturumdan Çık</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1190"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1189"/>
         <source>%1: %2 (%3)</source>
         <translation>%1: %2 (%3)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1217"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1216"/>
         <source>Connect to session, enter Password:</source>
         <translation>Oturuma bağlanmak için Şifre girin:</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1490"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1489"/>
         <source>Memory opertion failed; Error: %1</source>
         <translation>Bellek işlemi başarısız oldu; Hata: %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1504"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1503"/>
         <source>No hidden processes found.</source>
         <translation>Gizli işlem bulunamadı.</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1711"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1710"/>
         <source>Graph background</source>
         <translation>Grafik arka planı</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1712"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1711"/>
         <source>Graph text</source>
         <translation>Grafik metni</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1714"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1713"/>
         <source>Plot background</source>
         <translation>Çizim arka planı</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1715"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1714"/>
         <source>Plot text</source>
         <translation>Çizim metni</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1716"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1715"/>
         <source>Plot grid</source>
         <translation>Çizim ızgarası</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1718"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1717"/>
         <source>List grid color</source>
         <translation>Çizim ızgarası rengi</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1719"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1718"/>
         <source>Default background</source>
         <translation>Varsayılan arka plan</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1722"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1721"/>
         <source>New items</source>
         <translation>Yeni öğeler</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1723"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1722"/>
         <source>Removed items</source>
         <translation>Kaldırılan öğeler</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1726"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1725"/>
         <source>Dangerous process</source>
         <translation>Tehlikeli işlemler</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1728"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1727"/>
         <source>System processes</source>
         <translation>Sistem işlemleri</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1729"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1728"/>
         <source>Current user processes</source>
         <translation>Mevcut kullanıcı işlemleri</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1730"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1729"/>
         <source>Service processes</source>
         <translation>Hizmet işlemleri</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1732"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1731"/>
         <source>Sandboxed processes</source>
         <translation>Korumalı alan işlemleri</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1733"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1732"/>
         <source>Job processes</source>
         <translation>İş işlemleri</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1734"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1733"/>
         <source>Pico processes</source>
         <translation>Pico işlemleri</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1735"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1734"/>
         <source>Immersive processes</source>
         <translation>Immersive işlemler</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1736"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1735"/>
         <source>.NET processes</source>
         <translation>.NET işlemleri</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1738"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1737"/>
         <source>Elevated processes</source>
         <translation>Yükseltilmiş işlemler</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1740"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1739"/>
         <source>Kernel Services (Driver)</source>
         <translation>Çekirdek Hizmetleri (Sürücü)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1741"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1740"/>
         <source>Gui threads</source>
         <translation>GUI iş parçacıkları</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1742"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1741"/>
         <source>Inherited handles</source>
         <translation>Devralınan tanıtıcılar</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1743"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1742"/>
         <source>Protected handles/Critical tasks</source>
         <translation>Korumalı tanıtıcılar/Kritik görevler</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1746"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1745"/>
         <source>Executable memory</source>
         <translation>Yürütülebilir bellek</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="891"/>
+        <location filename="GUI/TaskExplorer.cpp" line="890"/>
         <source>D: %1</source>
         <translation>İnd: %1</translation>
     </message>
@@ -6099,32 +6167,32 @@ Lütfen bunun yerine Task Explorer uygulamasının 64 bit sürümünü çalışt
         <translation>Mevcut Kullanıcının İşlemleri</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="341"/>
+        <location filename="GUI/TaskExplorer.cpp" line="340"/>
         <source>Empty Standby std::list</source>
         <translation>Hazırda bekleyen std::listesini boşalt</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="342"/>
+        <location filename="GUI/TaskExplorer.cpp" line="341"/>
         <source>Empty Priority 0 std::list</source>
         <translation>Öncelik 0 std::listesini boşalt</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="593"/>
+        <location filename="GUI/TaskExplorer.cpp" line="592"/>
         <source>TaskExplorer with kernel driver is ready...</source>
         <translation>Çekirdek sürücüsüyle TaskExplorer hazır...</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="893"/>
+        <location filename="GUI/TaskExplorer.cpp" line="892"/>
         <source>U: %1</source>
         <translation>Yük: %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1024"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1023"/>
         <source>Operation failed for %1 item(s).</source>
         <translation>İşlem %1 öğe için başarısız oldu.</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="906"/>
+        <location filename="GUI/TaskExplorer.cpp" line="905"/>
         <source>Task Explorer<byte value="xd"/>
 CPU: %1%<byte value="xd"/>
 Ram: %2%</source>
@@ -6133,50 +6201,50 @@ CPU: %1%
 Ram: %2%</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="909"/>
+        <location filename="GUI/TaskExplorer.cpp" line="908"/>
         <source><byte value="xd"/>
 Swap: %1%</source>
         <translation>
 Takas: %1%</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="245"/>
+        <location filename="main.cpp" line="257"/>
         <source>Disable KTaskExplorer driver. Note: this will limit the aplications functionality!</source>
         <translation>KTaskExplorer sürücüsünü devre dışı bırakın. Not: Bu, uygulamanın işlevselliğini sınırlayacaktır!</translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="929"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="939"/>
         <source>Updating DynData</source>
         <translation>DynData güncelleniyor</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1876"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1875"/>
         <source>&lt;p&gt;TaskExplorer is a powerfull multi-purpose Task Manager that helps you monitor system resources, debug software and detect malware.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;On Windows TaskExplorer is powered by the ProsessHacker Library.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Visit &lt;a href=&quot;https://github.com/DavidXanatos/TaskExplorer&quot;&gt;TaskExplorer on github&lt;/a&gt; for more information.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Config Dir: %1&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Icons from &lt;a href=&quot;https://icons8.com&quot;&gt;icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;TaskExplorer, sistem kaynaklarını izlemenize, yazılımlardan hata ayıklamanıza ve kötü amaçlı yazılımları tespit etmenize yardımcı olan güçlü, çok amaçlı bir Görev Yöneticisidir.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Windows&apos;ta TaskExplorer, ProsessHacker Kütüphanesi tarafından desteklenmektedir.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Daha fazla bilgi için &lt;a href=&quot;https://github.com/DavidXanatos/TaskExplorer&quot;&gt;Github&apos;da TaskExplorer&lt;/a&gt; adresini ziyaret edin.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Yapılandırma Dizini: %1&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Simgeler &lt;a href=&quot;https://icons8.com&quot;&gt;icons8.com&lt;/a&gt; adresinden&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="211"/>
+        <location filename="main.cpp" line="223"/>
         <source>Failed to update DynData, %1, Error: 0x%2 (%3).
 Do you want to continue anyways (Ok), or terminate (Cancel)?</source>
         <translation>DynData güncellenemedi, %1, Hata: 0x%2 (%3). Yine de devam etmek (Tamam) istiyor musunuz yoksa sonlandırmak (İptal) mı istiyorsunuz?</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="219"/>
+        <location filename="main.cpp" line="231"/>
         <source>The current DynData for the KTaskExplorer driver does not yet supported on your windows kernel version.&lt;br /&gt;You can check for &lt;a href=&quot;https://github.com/DavidXanatos/TaskExplorer/releases&quot;&gt;TaskExplorer updates on github&lt;/a&gt;, or grab the latest ksidyn.bin and ksidyn.sig from &lt;a href=&quot;https://systeminformer.sourceforge.io/downloads&quot;&gt;the latest SystemInformer&lt;/a&gt; and put them in the instalaltion directors next to KSystemInformer.sys.&lt;br /&gt;Instalation Directory: %4&lt;br /&gt;&lt;br /&gt;Operating System Details:&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Windows %1&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Windows Kernel %2&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TaskExplorer %3&lt;br /&gt;&lt;br /&gt;</source>
         <translation>KTaskExplorer sürücüsü için geçerli DynData henüz Windows çekirdek sürümünüzde desteklenmiyor.&lt;br /&gt;Github&apos;da &lt;a href=&quot;https://github.com/DavidXanatos/TaskExplorer/releases&quot;&gt;TaskExplorer güncellemelerini&lt;/a&gt; denetleyebilir veya &lt;a href=&quot;https://systeminformer.sourceforge.io/downloads&quot;&gt;en son SystemInformer&lt;/a&gt;&apos;dan en son ksidyn.bin ve ksidyn.sig&apos;i alabilir ve bunları KSystemInformer.sys&apos;nin yanındaki kurulum dizinlerine yerleştirebilirsiniz.&lt;br /&gt;Kurulum Dizini: %4&lt;br /&gt;&lt;br /&gt;İşletim Sistemi Ayrıntıları:&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Windows %1&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Windows Çekirdeği %2&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Görev Gezgini %3&lt;br /&gt;&lt;br /&gt;</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="232"/>
+        <location filename="main.cpp" line="244"/>
         <source>Update did not help, do you want to continue anyways (Ok), or terminate (Cancel)?</source>
         <translation>Güncelleme işe yaramadı, devam etmek (Tamam) mi istiyorsunuz yoksa sonlandırmak (İptal) mı istiyorsunuz?</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="234"/>
+        <location filename="main.cpp" line="246"/>
         <source>Do you want to try to download updated DynData (Yes), start without the driver (No), or terminate (Cancel)?</source>
         <translation>Güncellenmiş DynData&apos;yı indirmeyi (Evet), sürücüsüz başlatmayı (Hayır) veya sonlandırmayı (İptal) denemek istiyor musunuz?</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="239"/>
+        <location filename="main.cpp" line="251"/>
         <source>Failed to load KTaskExplorer driver, %1, Error: 0x%2 (%3).
 Do you want to continue anyways (Ok), or terminate (Cancel)?</source>
         <translation>KTaskExplorer sürücüsü yüklenemedi, %1, Hata: 0x%2 (%3). Yine de devam etmek (Tamam) mi istiyorsunuz yoksa sonlandırmak (İptal) mı istiyorsunuz?</translation>
@@ -6186,122 +6254,121 @@ Do you want to continue anyways (Ok), or terminate (Cancel)?</source>
         <translation type="vanished">DynData güncellenemedi, %1, Hata: 0x%2 (%3).</translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="946"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="956"/>
         <source>Failed to open archive.</source>
         <translation>Arşiv açılamadı.</translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="958"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="968"/>
         <source>DynData not found in archive.</source>
         <translation>DynData arşivde bulunamadı.</translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="981"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="991"/>
         <source>Failed to extreact files.</source>
         <translation>Dosyalar çıkarılamadı.</translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="991"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="1001"/>
         <source>Updated DynData successfully</source>
         <translation>DynData başarıyla güncellendi</translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="1004"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="1014"/>
         <source>Latest SI build already downloaded</source>
         <translation>En son SI sürümü zaten indirilmiş</translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="1019"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="1029"/>
         <source>Downloading latest SI build</source>
         <translation>En son SI sürümü indiriliyor</translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="1026"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="1036"/>
         <source>Download Failed, Error: %1</source>
         <translation>İndirme Başarısız, Hata: %1</translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="1032"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="1042"/>
         <source>Failed to open file for writing.</source>
         <translation>Yazma için dosya açılamadı.</translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="1038"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="1048"/>
         <source>Successfully Downloaded latest SI build</source>
         <translation>En son SI derlemesi başarıyla indirildi</translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="1059"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="1069"/>
         <source>Update Check Failed, Error: %1</source>
         <translation>Güncelleme Denetimi Başarısız Oldu, Hata: %1</translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="1068"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="1078"/>
         <source>Update Check Failed, Error: Unrecognized Reply</source>
         <translation>Güncelleme Denetimi Başarısız Oldu, Hata: Tanınmayan Yanıt</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="315"/>
         <source>Use KSystemInformer</source>
-        <translation>KSystemInformer kullan</translation>
+        <translation type="vanished">KSystemInformer kullan</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1871"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1870"/>
         <source>&lt;h3&gt;About TaskExplorer&lt;/h3&gt;&lt;p&gt;Version %1&lt;/p&gt;&lt;p&gt;Copyright (C) 2019-2025 David Xanatos (xanasoft.com)&lt;/p&gt;</source>
         <translation>&lt;h3&gt;TaskExplorer Hakkında&lt;/h3&gt;&lt;p&gt;Sürüm %1&lt;/p&gt;&lt;p&gt;Telif Hakkı (C) 2019-2025 David Xanatos (xanasoft.com)&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1804"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1803"/>
         <source>Reset Columns</source>
         <translation>Sütunları Sıfırla</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1805"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1804"/>
         <source>Copy Cell</source>
         <translation>Hücreyi Kopyala</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1806"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1805"/>
         <source>Copy Row</source>
         <translation>Satırı Kopyala</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1807"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1806"/>
         <source>Copy Panel</source>
         <translation>Paneli Kopyala</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1808"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1807"/>
         <source>Case Sensitive</source>
         <translation>Harfe Duyarlı</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1809"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1808"/>
         <source>RegExp</source>
         <translation>Düzİfa</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1810"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1809"/>
         <source>Highlight</source>
         <translation>Vurgula</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1811"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1810"/>
         <source>Close</source>
         <translation>Kapat</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1812"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1811"/>
         <source>&amp;Find ...</source>
         <translation>&amp;Bul ...</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1813"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1812"/>
         <source>All columns</source>
         <translation>Tüm sütunlar</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="252"/>
+        <location filename="main.cpp" line="264"/>
         <source>Failed to update DynData, %1.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10686,87 +10753,88 @@ If you save the recovery information using this program, the additional failure 
         <translation>Task Explorer - Çekirdek Sürücüsü</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="40"/>
-        <location filename="Forms/DriverWindow.ui" line="154"/>
-        <location filename="Forms/DriverWindow.ui" line="228"/>
-        <location filename="Forms/DriverWindow.ui" line="235"/>
+        <location filename="Forms/DriverWindow.ui" line="53"/>
+        <source>Driver Status:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Forms/DriverWindow.ui" line="76"/>
+        <location filename="Forms/DriverWindow.ui" line="83"/>
+        <location filename="Forms/DriverWindow.ui" line="107"/>
+        <location filename="Forms/DriverWindow.ui" line="124"/>
+        <location filename="Forms/DriverWindow.ui" line="175"/>
         <source>TextLabel</source>
         <translation>TextLabel</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="47"/>
+        <location filename="Forms/DriverWindow.ui" line="141"/>
         <source>Use Kernel Driver</source>
         <translation>Çekirdek Sürücü Kullan</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="80"/>
+        <location filename="Forms/DriverWindow.ui" line="165"/>
+        <source>DynData Status:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Connect</source>
-        <translation>Bağlan</translation>
+        <translation type="vanished">Bağlan</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="88"/>
         <source>Unrestricted (unsecure)</source>
-        <translation>Kısıtlanmamış (güvenli olmayan)</translation>
+        <translation type="vanished">Kısıtlanmamış (güvenli olmayan)</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="93"/>
         <source>Require Debug Privilege</source>
-        <translation>Hata Ayıklama Ayrıcalığı Gerektir</translation>
+        <translation type="vanished">Hata Ayıklama Ayrıcalığı Gerektir</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="98"/>
         <source>Require Trusted Signature</source>
-        <translation>Güvenilir İmza Gerektir</translation>
+        <translation type="vanished">Güvenilir İmza Gerektir</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="103"/>
         <source>Require Signature and Privilege</source>
-        <translation>İmza ve Ayrıcalık Gerektir</translation>
+        <translation type="vanished">İmza ve Ayrıcalık Gerektir</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="111"/>
         <source>Driver access restrictions</source>
-        <translation>Sürücü erişim kısıtlamaları</translation>
+        <translation type="vanished">Sürücü erişim kısıtlamaları</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="121"/>
         <source>Driver File:</source>
-        <translation>Sürücü Dosyası:</translation>
+        <translation type="vanished">Sürücü Dosyası:</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="144"/>
+        <location filename="Forms/DriverWindow.ui" line="131"/>
         <source>Verification Status:</source>
         <translation>Doğrulama Durumu:</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="161"/>
         <source>Driver (service) Status:</source>
-        <translation>Sürücü (hizmet) Durumu:</translation>
+        <translation type="vanished">Sürücü (hizmet) Durumu:</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="171"/>
+        <location filename="Forms/DriverWindow.ui" line="90"/>
         <source>Connection Status:</source>
         <translation>Bağlantı Durumu:</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="188"/>
+        <location filename="Forms/DriverWindow.ui" line="148"/>
         <source>Device Name:</source>
         <translation>Aygıt Adı:</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="198"/>
         <source>Auto Selection</source>
-        <translation>Oto Seçim</translation>
+        <translation type="vanished">Oto Seçim</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="205"/>
+        <location filename="Forms/DriverWindow.ui" line="114"/>
         <source>OS Driver Signing Policy:</source>
         <translation>İşletim Sistemi Sürücü İmzalama İlkesi:</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="221"/>
         <source>Start/Stop</source>
-        <translation>Başlat/Durdur</translation>
+        <translation type="vanished">Başlat/Durdur</translation>
     </message>
 </context>
 <context>
@@ -10815,7 +10883,7 @@ If you save the recovery information using this program, the additional failure 
 <context>
     <name>QObject</name>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="694"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="680"/>
         <source>The kernel driver file &apos;%1&apos; was not found.</source>
         <translation>Çekirdek sürücü dosyası &apos;%1&apos; bulunamadı.</translation>
     </message>

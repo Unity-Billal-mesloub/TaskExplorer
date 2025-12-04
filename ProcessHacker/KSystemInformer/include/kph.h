@@ -383,6 +383,8 @@ extern PUNICODE_STRING KphAltitude;
 extern PUNICODE_STRING KphPortName;
 #ifndef IS_KTE
 extern KPH_PARAMETER_FLAGS KphParameterFlags;
+#else
+extern PUNICODE_STRING KphClientPath;
 #endif
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
@@ -1774,7 +1776,14 @@ typedef struct _KPH_PROCESS_CONTEXT
             ULONG IsSubsystemProcess : 1;
             ULONG AllocatedImageName : 1;
             ULONG SystemAllocatedImageFileName : 1;
+#ifndef IS_KTE
             ULONG Reserved : 23;
+#else
+            ULONG DecidedOnProtection : 1;
+            ULONG AccessedDuringCreation : 1;
+            ULONG Reserved : 21;
+#endif
+			
         };
     };
 

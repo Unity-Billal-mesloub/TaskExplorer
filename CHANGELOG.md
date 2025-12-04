@@ -9,11 +9,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - added TaskHelper.exe used as worker and service instead of using TaskExplorer.exe itself
+- improved KSI Driver's proces protection, it no longer required DynData
+  - this change allows to use a lare portion of the driver functionality without up to date DynData
 
 ### Changed
 - Changed settings tabs from timple tabs to side tabs with icons
 - switched to Qt 6.8.3 with [Windows 7 compatibility patches](https://github.com/crystalidea/qt6windows7)
- 
+- updated QWT library to 6.3
+
 ### Fixed
 - fixed crash on handle view
 

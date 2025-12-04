@@ -11,7 +11,7 @@
 
 #pragma once
 
-#define IS_KTE
+#define IS_KTE // Is KernelTaskExplorer
 
 #ifdef _KERNEL_MODE
 #define PHNT_MODE PHNT_MODE_KERNEL

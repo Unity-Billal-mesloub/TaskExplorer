@@ -138,6 +138,9 @@
     <ClCompile Include="Common\OtherFunctions.cpp">
       <Filter>Common</Filter>
     </ClCompile>
+    <ClCompile Include="Common\NetworkAccessManager.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MiscHelpers.h">
@@ -281,6 +284,9 @@
     </QtMoc>
     <QtMoc Include="Archive\SplitFile.h">
       <Filter>Archive</Filter>
+    </QtMoc>
+    <QtMoc Include="Common\NetworkAccessManager.h">
+      <Filter>Common</Filter>
     </QtMoc>
   </ItemGroup>
 </Project>

@@ -96,8 +96,10 @@ extern "C" {
 extern BOOLEAN g_KphStartupMax;
 extern BOOLEAN g_KphStartupHigh;
 
+extern bool g_KsiDynDataLoaded;
+
 // initialization call
-int InitPH(bool bSvc = false);
+int InitPH();
 
 STATUS InitKSI(const QString& AppDir);
 STATUS CleanupKSI();

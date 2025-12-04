@@ -38,6 +38,9 @@ typedef struct _KPH_CONFIG_PARAMETERS
     _In_opt_ PPH_STRINGREF Altitude;
     _In_ ULONG FsSupportedFeatures;
     _In_ KPH_PARAMETER_FLAGS Flags;
+#ifdef IS_KTE
+    _In_opt_ PCPH_STRINGREF ClientPath;
+#endif
     _In_ BOOLEAN EnableNativeLoad;
     _In_ BOOLEAN EnableFilterLoad;
     _In_opt_ PKPH_COMMS_CALLBACK Callback;

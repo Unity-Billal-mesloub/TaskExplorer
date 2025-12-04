@@ -502,12 +502,16 @@ NTSTATUS KphStartProtectingProcess(
 
     releaseLock = FALSE;
 
+#ifdef IS_KTE
+    dyn = NULL;
+#else
     dyn = KphReferenceDynData();
     if (!dyn)
     {
         status = STATUS_NOINTERFACE;
         goto Exit;
     }
+#endif
 
     SeCaptureSubjectContextEx(NULL, Process->EProcess, &subjectContext);
 
@@ -548,6 +552,50 @@ NTSTATUS KphStartProtectingProcess(
     Process->ProcessAllowedMask = ProcessAllowedMask;
     Process->ThreadAllowedMask = ThreadAllowedMask;
 
+#ifdef IS_KTE
+    dyn = KphReferenceDynData();
+    if (!dyn)
+    {
+        // if the process wasn't marked as accessed we are done
+        if (!Process->AccessedDuringCreation)
+        {
+            //DbgPrintEx(DPFLTR_DEFAULT_ID, 0xFFFFFFFF, "BAM KphStartProtectingProcess: Skipping KphEnumerateProcessContexts, no dyn data available and process wasn't accessed\n");
+            status = STATUS_SUCCESS;
+        }
+        else
+        {
+            //DbgPrintEx(DPFLTR_DEFAULT_ID, 0xFFFFFFFF, "BAM KphStartProtectingProcess: Fail protection process was accessed, and there are no dyn data\n");
+            status = STATUS_NOINTERFACE;
+        }
+        goto Exit;
+    }
+	
+    //DbgPrintEx(DPFLTR_DEFAULT_ID, 0xFFFFFFFF, "BAM KphStartProtectingProcess: KphpEnumProcessContextsForProtection\n");
+
+    context.Dyn = dyn;
+    context.Status = STATUS_SUCCESS;
+    context.Process = Process;
+
+    KphEnumerateProcessContexts(KphpEnumProcessContextsForProtection, &context);
+
+    status = context.Status;
+
+Exit:
+
+    Process->DecidedOnProtection = TRUE;
+
+    if (releaseLock)
+    {
+        if (!NT_SUCCESS(status))
+        {
+            Process->Protected = FALSE;
+            Process->ProcessAllowedMask = 0;
+            Process->ThreadAllowedMask = 0;
+        }
+
+        KphReleaseRWLock(&Process->ProtectionLock);
+    }
+#else
     context.Dyn = dyn;
     context.Status = STATUS_SUCCESS;
     context.Process = Process;
@@ -569,6 +617,7 @@ Exit:
     {
         KphReleaseRWLock(&Process->ProtectionLock);
     }
+#endif
 
     if (dyn)
     {
@@ -666,6 +715,104 @@ VOID KphApplyObProtections(
     if (Info->ObjectType == *PsProcessType)
     {
         process = KphGetEProcessContext(Info->Object);
+#ifdef IS_KTE
+        if (!process || !process->DecidedOnProtection)
+        {
+            BOOLEAN MightBeClient;
+
+            if (KphClientPath->Length == 0)
+            {
+                MightBeClient = TRUE;
+            }
+            else if (process)
+            {
+                MightBeClient = RtlPrefixUnicodeString(KphClientPath, &process->ImageName, TRUE);
+            }
+            else
+            {
+                UNICODE_STRING* ProcessImageName = NULL;
+                status = SeLocateProcessImageName(Info->Object, &ProcessImageName);
+                if (NT_SUCCESS(status))
+                {
+                    MightBeClient = RtlPrefixUnicodeString(KphClientPath, ProcessImageName, TRUE);
+
+#pragma warning(suppress: 4995) // intentional use of ExFreePool
+                    ExFreePoolWithTag(ProcessImageName, 0);
+                }
+                else
+                {
+                    MightBeClient = FALSE;
+                }
+            }
+
+            if (MightBeClient)
+            {
+                LARGE_INTEGER timeout;
+                timeout.QuadPart = -10 * 1000; // 1 ms
+                BOOLEAN hasTerminated = FALSE;
+
+                int i = 0;
+                while (i++ < 1000) // 1 second max
+                {
+                    status = KeWaitForSingleObject(Info->Object,
+                        Executive,
+                        KernelMode,
+                        FALSE,
+                        &timeout);
+                    if (status == STATUS_SUCCESS)
+                    {
+                        hasTerminated = TRUE;
+                        break; // woopsi the process exited
+                    }
+
+                    if (!process)
+                    {
+                        process = KphGetEProcessContext(Info->Object);
+                    }
+
+                    if (process && process->DecidedOnProtection)
+                    {
+                        break;
+                    }
+                }
+
+                DbgPrintEx(DPFLTR_DEFAULT_ID, 0xFFFFFFFF, "BAM KphApplyObProtections - %s process (%d): %s (%d) -> %s (%d)\n", process ? (process->DecidedOnProtection ? "found decided" : "found UNdecided") : (hasTerminated ? "seen terminated" : "could NOT find"), i,
+                    PsGetProcessImageFileName(IoGetCurrentProcess()), (ULONG)(UINT_PTR)PsGetProcessId(IoGetCurrentProcess()), PsGetProcessImageFileName(Info->Object), (ULONG)(UINT_PTR)PsGetProcessId(Info->Object));
+
+                // If the create process callback still hasn't run we just start tracking the process ourselves
+                // unless ofcause that process has already exited
+                if (!process && !hasTerminated)
+                {
+                    //DbgPrintEx(DPFLTR_DEFAULT_ID, 0xFFFFFFFF, "BAM KphApplyObProtections Tracking: %s (%d)\n", PsGetProcessImageFileName(Info->Object), (ULONG)(UINT_PTR)PsGetProcessId(Info->Object));
+                    process = KphTrackProcessContext(Info->Object);
+
+                    // final safety check - if the process exited in the meantime we untrack it again
+                    if (process)
+                    {
+                        LARGE_INTEGER zeroTimeout = { 0 };
+                        status = KeWaitForSingleObject(Info->Object,
+                            Executive,
+                            KernelMode,
+                            FALSE,
+                            &zeroTimeout);
+
+                        if (status == STATUS_SUCCESS)
+                        {
+                            KphDereferenceObject(process);
+
+                            //DbgPrintEx(DPFLTR_DEFAULT_ID, 0xFFFFFFFF, "BAM KphApplyObProtections UnTracking: %s (%d)\n", PsGetProcessImageFileName(Info->Object), (ULONG)(UINT_PTR)PsGetProcessId(Info->Object));
+                            process = KphUntrackProcessContext(PsGetProcessId(Info->Object));
+                            if (process)
+                            {
+                                KphDereferenceObject(process);
+                                process = NULL;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+#endif
     }
     else
     {
@@ -693,6 +840,15 @@ VOID KphApplyObProtections(
 
     KphAcquireRWLockShared(&process->ProtectionLock);
     releaseLock = TRUE;
+
+#ifdef IS_KTE
+    // If the create process callback still hasn't decided if this will be a protected process, we just mark it as accessed
+    // when accessed KphStartProtectingProcess will fix the handles
+    if (!process->DecidedOnProtection)
+    {
+        process->AccessedDuringCreation = TRUE;
+    }
+#endif
 
     if (!process->Protected)
     {

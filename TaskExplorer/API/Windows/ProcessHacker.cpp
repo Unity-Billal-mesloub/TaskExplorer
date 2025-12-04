@@ -22,6 +22,7 @@ extern "C" {
 #include <kphdyndata.h>
 }
 #include <settings.h>
+#include <psapi.h>
 
 QString CastPhString(PPH_STRING phString, bool bDeRef)
 {
@@ -204,7 +205,7 @@ NTSTATUS NTAPI MyMapViewOfSection(
 	return status;
 }
 
-int InitPH(bool bSvc)
+int InitPH()
 {
 	HINSTANCE Instance = GetThisModuleHandle(); // (HINSTANCE)::GetModuleHandle(NULL);
 	LONG result;
@@ -236,23 +237,6 @@ int InitPH(bool bSvc)
 
 	//PhpProcessStartupParameters();
 	PhpEnablePrivileges();
-
-	if (bSvc)
-	{
-		// Enable some required privileges.
-		HANDLE tokenHandle;
-		if (NT_SUCCESS(PhOpenProcessToken(NtCurrentProcess(), TOKEN_ADJUST_PRIVILEGES, &tokenHandle)))
-		{
-			PhSetTokenPrivilege2(tokenHandle, SE_ASSIGNPRIMARYTOKEN_PRIVILEGE, SE_PRIVILEGE_ENABLED);
-			PhSetTokenPrivilege2(tokenHandle, SE_INCREASE_QUOTA_PRIVILEGE, SE_PRIVILEGE_ENABLED);
-			PhSetTokenPrivilege2(tokenHandle, SE_BACKUP_PRIVILEGE, SE_PRIVILEGE_ENABLED);
-			PhSetTokenPrivilege2(tokenHandle, SE_RESTORE_PRIVILEGE, SE_PRIVILEGE_ENABLED);
-			PhSetTokenPrivilege2(tokenHandle, SE_IMPERSONATE_PRIVILEGE, SE_PRIVILEGE_ENABLED);
-			NtClose(tokenHandle);
-		}
-
-		return 0;
-	}
 
 	PhSettingsInitialization();
     //PhpInitializeSettings();
@@ -669,6 +653,8 @@ bool IsOnARM64()
 	return false;
 }
 
+bool g_KsiDynDataLoaded = false;
+
 STATUS InitKSI(const QString& AppDir)
 {
 	QString FileName = theConf->GetString("OptionsKSI/FileName", "SystemInformer.sys");
@@ -701,15 +687,6 @@ STATUS InitKSI(const QString& AppDir)
 
 	NTSTATUS status;
 
-	PBYTE dynData = NULL;
-	ULONG dynDataLength;
-	PBYTE signature = NULL;
-	ULONG signatureLength;
-
-	status = KsiGetDynData(Split2(FileName, "\\", true).first, &dynData, &dynDataLength, &signature, &signatureLength);
-	if (!NT_SUCCESS(status)) 
-		return ERR("Unsupported windows version.", STATUS_UNKNOWN_REVISION);
-
 	// todo: fix-me
 	//if (PhDoesOldKsiExist())
 	//{
@@ -729,6 +706,14 @@ STATUS InitKSI(const QString& AppDir)
 	PPH_STRING objectName = CastQString(ObjectName);
 	PPH_STRING portName = CastQString(PortName);
 	PPH_STRING altitude = CastQString(Altitude);
+
+	UNICODE_STRING fileName;
+	WCHAR buffer[MAX_PATH];
+	DWORD size = GetProcessImageFileNameW(GetCurrentProcess(), buffer, MAX_PATH);
+	wcsrchr(buffer, L'\\')[0] = 0;
+	UNICODE_STRING ustr;
+	RtlInitUnicodeString(&ustr, buffer);
+	PPH_STRING clientPath = PhCreateStringFromUnicodeString(&ustr);
 
 	KPH_CONFIG_PARAMETERS config = { 0 };
 	config.FileName = &ksiFileName->sr;
@@ -756,7 +741,13 @@ STATUS InitKSI(const QString& AppDir)
 	config.Flags.AllowDebugging = theConf->GetBool("OptionsKSI/AllowDebugging", false);
 #endif
 	config.Flags.RandomizedPoolTag = theConf->GetBool("OptionsKSI/RandomizedPoolTag", false);
+#ifdef _DEBUG 
+	config.Flags.DynDataNoEmbedded = theConf->GetBool("OptionsKSI/DynDataNoEmbedded", true);
+#else
 	config.Flags.DynDataNoEmbedded = theConf->GetBool("OptionsKSI/DynDataNoEmbedded", false);
+#endif
+
+	config.ClientPath = &clientPath->sr;
 
 	config.EnableNativeLoad = KsiEnableLoadNative;
 	config.EnableFilterLoad = KsiEnableLoadFilter;
@@ -768,13 +759,35 @@ STATUS InitKSI(const QString& AppDir)
 		Status = ERR("KphConnect Failed.", status);
 	else
 	{
-		status = KphActivateDynData(dynData, dynDataLength, signature, signatureLength);
+		KPH_LEVEL level = KphLevelEx(FALSE);
+
+		PBYTE dynData = NULL;
+		ULONG dynDataLength;
+		PBYTE signature = NULL;
+		ULONG signatureLength;
+
+		status = KsiGetDynData(Split2(FileName, "\\", true).first, &dynData, &dynDataLength, &signature, &signatureLength);
 		if (!NT_SUCCESS(status))
-			Status = ERR("KphActivateDynData Failed.", status);
+			Status = ERR("Unsupported windows version.", STATUS_UNKNOWN_REVISION);
 		else
 		{
-			KPH_LEVEL level = KphLevelEx(FALSE);
+			status = KphActivateDynData(dynData, dynDataLength, signature, signatureLength);
+			if (!NT_SUCCESS(status))
+				Status = ERR("KphActivateDynData Failed.", status);
+			else
+				g_KsiDynDataLoaded = true;
+		}
 
+		if (signature)
+			PhFree(signature);
+		if (dynData)
+			PhFree(dynData);
+
+		// Medium level indicates protection failed to be applied presumably due to missing dyndata
+		// if level is other we try restarting procedure to gain higher trust level
+		// is we got stuck on medium level and dyndata load failes we bug out
+		if (NT_SUCCESS(status) || level != KphLevelMed)
+		{
 			QStringList Info;
 
 			KPH_PROCESS_STATE processState = KphGetCurrentProcessState();
@@ -794,12 +807,13 @@ STATUS InitKSI(const QString& AppDir)
 					Info.append("tampered primary image");
 			}
 
+			Status = OK;
+
 			if ((level != KphLevelMax))
 			{
 				Status = ERR(QString("Unable to access the kernel driver: %1.").arg(Info.join(", ")), STATUS_ACCESS_DENIED);
 
-#ifndef _DEBUG
-				if (!NtCurrentPeb()->BeingDebugged)
+				if (config.Flags.AllowDebugging || !NtCurrentPeb()->BeingDebugged)
 				{
 					if ((level == KphLevelHigh) && !g_KphStartupMax)
 					{
@@ -816,7 +830,6 @@ STATUS InitKSI(const QString& AppDir)
 					if (!NT_SUCCESS(status))
 						Status = ERR("PhRestartSelf failed.", STATUS_ACCESS_DENIED);
 				}
-#endif
 			}
 
 			if (level == KphLevelMax)
@@ -858,11 +871,8 @@ STATUS InitKSI(const QString& AppDir)
 		PhDereferenceObject(altitude);
 	if (portName)
 		PhDereferenceObject(portName);
-
-	if (signature)
-		PhFree(signature);
-	if (dynData)
-		PhFree(dynData);
+	if (clientPath)
+		PhDereferenceObject(clientPath);
 
 //#ifdef DEBUG
 //	KsiDebugLogInitialize();

@@ -1272,6 +1272,9 @@
     <QtMoc Include="Common\TabPanel.h">
       <Filter>Common</Filter>
     </QtMoc>
+    <QtMoc Include="Common\StatusEx.h">
+      <Filter>Common</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\exe16.png">

@@ -63,9 +63,6 @@ CTaskService::~CTaskService()
 #ifndef USE_TASK_HELPER
 void CTaskService::start()
 {
-//#ifdef WIN32
-//	InitPH(true);
-//#endif
 	m_pServer = new QLocalServer(this);
 	QObject::connect(m_pServer, SIGNAL(newConnection()), SLOT(receiveConnection()));
 	m_pServer->listen(serviceName());

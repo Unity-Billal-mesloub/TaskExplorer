@@ -736,14 +736,7 @@
     <ClCompile Include="Common\Variant.cpp" />
     <ClCompile Include="Common\XVariant.cpp" />
     <ClCompile Include="GUI\AffinityDialog.cpp" />
-    <ClCompile Include="GUI\DriverWindow.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="GUI\DriverWindow.cpp" />
     <ClCompile Include="GUI\Filters\ProcessFilterModel.cpp" />
     <ClCompile Include="GUI\GraphBar.cpp" />
     <ClCompile Include="GUI\MemoryEditor.cpp" />
@@ -886,6 +879,7 @@
     <ClInclude Include="API\Windows\WinHelpers\FuncHook\Detours\detours.h" />
     <ClInclude Include="API\Windows\WinHelpers\FuncHook\Detours\detver.h" />
     <ClInclude Include="API\Windows\WinHelpers\FuncHook\HookUtils.h" />
+    <QtMoc Include="Common\StatusEx.h" />
     <ClInclude Include="version.h" />
     <QtMoc Include="SVC\TaskService.h">
       <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../SVC/%(Filename)%(Extension)</ForceInclude>
@@ -1431,14 +1425,7 @@
     <QtMoc Include="GUI\Models\DnsModel.h" />
     <QtMoc Include="GUI\Models\PoolModel.h" />
     <QtMoc Include="GUI\Models\NtObjectModel.h" />
-    <QtMoc Include="GUI\DriverWindow.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
-    </QtMoc>
+    <QtMoc Include="GUI\DriverWindow.h" />
     <QtMoc Include="GUI\MultiErrorDialog.h" />
     <QtMoc Include="GUI\PersistenceConfig.h" />
     <ClInclude Include="GUI\Filters\ProcessFilterModel.h" />

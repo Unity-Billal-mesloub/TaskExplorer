@@ -2174,6 +2174,31 @@ Exit:
     return status;
 }
 
+#ifdef IS_KTE
+_IRQL_requires_max_(PASSIVE_LEVEL)
+BOOLEAN KphTestIfMightBeClient(
+    _In_ PKPH_PROCESS_CONTEXT Process
+    )
+{
+    if (Process->ImageFileName &&
+        Process->FileObject &&
+        !Process->VerifiedProcess)
+    {
+        if(KphClientPath->Length == 0)
+        {
+            return TRUE; // not configured test all
+        }
+
+        if (RtlPrefixUnicodeString(KphClientPath, Process->ImageFileName, TRUE))
+        {
+            //DbgPrintEx(DPFLTR_DEFAULT_ID, 0xFFFFFFFF, "BAM KphTestIfMightBeClient: %S (%d)\n", Process->ImageFileName->Buffer, (ULONG)(UINT_PTR)Process->ProcessId);
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+#endif
+
 /**
  * \brief Performs actions to verify a process and begin protecting it. Process
  * protection is only started processes that meet the necessary requirements.
@@ -2190,9 +2215,13 @@ VOID KphVerifyProcessAndProtectIfAppropriate(
 
     KPH_PAGED_CODE_PASSIVE();
 
+#ifdef IS_KTE
+    if (KphTestIfMightBeClient(Process))
+#else
     if (Process->ImageFileName &&
         Process->FileObject &&
         !Process->VerifiedProcess)
+#endif
     {
         status = KphVerifyFile(Process->ImageFileName, Process->FileObject);
 
@@ -2242,6 +2271,13 @@ VOID KphVerifyProcessAndProtectIfAppropriate(
             NT_ASSERT(!Process->Protected);
         }
     }
+#ifdef IS_KTE
+    else
+    {
+        // we don't care no lock needed here
+        Process->DecidedOnProtection = TRUE;
+    }
+#endif
 }
 
 /**
@@ -2291,12 +2327,16 @@ KPH_PROCESS_STATE KphGetProcessState(
 
     if (KphProtectionsSuppressed())
     {
+//#ifndef IS_KTE
         //
         // This ultimately permits low state callers into the driver. But still
         // check for verification. We still want to exercise the code below,
         // regardless.
         //
         processState = ~KPH_PROCESS_VERIFIED_PROCESS;
+//#else
+        processState = KPH_PROCESS_NOT_BEING_DEBUGGED;
+//#endif
     }
     else
     {

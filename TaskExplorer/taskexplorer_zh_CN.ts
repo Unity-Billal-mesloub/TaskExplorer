@@ -367,73 +367,102 @@
 <context>
     <name>CDriverWindow</name>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="24"/>
         <source>(Auto Selection)</source>
-        <translation>（自动选择）</translation>
+        <translation type="vanished">（自动选择）</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="53"/>
+        <location filename="GUI/DriverWindow.cpp" line="24"/>
         <source>Test Signing Enabled</source>
         <translation>测试签名已启用</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="55"/>
+        <location filename="GUI/DriverWindow.cpp" line="26"/>
         <source>Signature Required (CKS Enabled)</source>
         <translation>需要数字签名（CKS已启用）</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="57"/>
+        <location filename="GUI/DriverWindow.cpp" line="28"/>
         <source>Signature Required</source>
         <translation>需要数字签名</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="147"/>
-        <location filename="GUI/DriverWindow.cpp" line="157"/>
-        <source>Start</source>
-        <translation>启动</translation>
+        <location filename="GUI/DriverWindow.cpp" line="90"/>
+        <source>DynData loaded</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="148"/>
+        <location filename="GUI/DriverWindow.cpp" line="92"/>
+        <source>DynData NOT loaded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/DriverWindow.cpp" line="98"/>
+        <source>None</source>
+        <translation type="unfinished">无</translation>
+    </message>
+    <message>
+        <location filename="GUI/DriverWindow.cpp" line="99"/>
+        <source>Minimal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/DriverWindow.cpp" line="100"/>
+        <source>Low</source>
+        <translation type="unfinished">低</translation>
+    </message>
+    <message>
+        <location filename="GUI/DriverWindow.cpp" line="101"/>
+        <source>Medium</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/DriverWindow.cpp" line="102"/>
+        <source>High</source>
+        <translation type="unfinished">高</translation>
+    </message>
+    <message>
+        <location filename="GUI/DriverWindow.cpp" line="103"/>
+        <source>Maximum</source>
+        <translation type="unfinished">最大</translation>
+    </message>
+    <message>
+        <source>Start</source>
+        <translation type="vanished">启动</translation>
+    </message>
+    <message>
+        <location filename="GUI/DriverWindow.cpp" line="81"/>
         <source>Not installed</source>
         <translation>未安装</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="162"/>
         <source>Stop</source>
-        <translation>停止</translation>
+        <translation type="vanished">停止</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="173"/>
         <source>Disconnect</source>
-        <translation>断开连接</translation>
+        <translation type="vanished">断开连接</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="175"/>
+        <location filename="GUI/DriverWindow.cpp" line="87"/>
         <source>Connected</source>
         <translation>已连接</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="182"/>
-        <source>Install</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="GUI/DriverWindow.cpp" line="182"/>
         <source>Connect</source>
-        <translation>连接</translation>
+        <translation type="vanished">连接</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="185"/>
         <source>Error: 0x%1</source>
-        <translation>错误： 0x%1</translation>
+        <translation type="vanished">错误： 0x%1</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="187"/>
+        <location filename="GUI/DriverWindow.cpp" line="109"/>
         <source>Disconnected</source>
         <translation>已断开连接</translation>
     </message>
     <message>
-        <location filename="GUI/DriverWindow.cpp" line="189"/>
+        <location filename="GUI/DriverWindow.cpp" line="111"/>
+        <location filename="GUI/DriverWindow.cpp" line="113"/>
         <source>N/A</source>
         <translation>无有效数值</translation>
     </message>
@@ -5383,39 +5412,39 @@ PartiallyChecked state means apply only to thread std::list.</source>
         <translation>TaskExplorer v%1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="116"/>
         <source>None</source>
-        <translation>无</translation>
+        <translation type="vanished">无</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="117"/>
         <source>Minimal</source>
-        <translation>最小</translation>
+        <translation type="vanished">最小</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="118"/>
         <source>Low</source>
-        <translation>低</translation>
+        <translation type="vanished">低</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="119"/>
         <source>Medium</source>
-        <translation>中</translation>
+        <translation type="vanished">中</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="120"/>
         <source>High</source>
-        <translation>高</translation>
+        <translation type="vanished">高</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="121"/>
         <source>Maximum</source>
-        <translation>最大</translation>
+        <translation type="vanished">最大</translation>
     </message>
     <message>
         <location filename="GUI/TaskExplorer.cpp" line="123"/>
-        <source> - [KSI Level %1]</source>
-        <translation> - [KSI级别%1]</translation>
+        <source> - [%1KSI%2]</source>
+        <oldsource> - [KSI Level %1]</oldsource>
+        <translation type="unfinished"> - [KSI级别%1]</translation>
+    </message>
+    <message>
+        <location filename="GUI/TaskExplorer.cpp" line="123"/>
+        <source>Limited </source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="GUI/TaskExplorer.cpp" line="129"/>
@@ -5564,7 +5593,7 @@ PartiallyChecked state means apply only to thread std::list.</source>
     </message>
     <message>
         <location filename="GUI/TaskExplorer.cpp" line="285"/>
-        <location filename="GUI/TaskExplorer.cpp" line="453"/>
+        <location filename="GUI/TaskExplorer.cpp" line="452"/>
         <source>Filter Processes</source>
         <translation>过滤进程</translation>
     </message>
@@ -5638,319 +5667,319 @@ PartiallyChecked state means apply only to thread std::list.</source>
         <translation type="vanished">使用驱动程序</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="321"/>
+        <location filename="GUI/TaskExplorer.cpp" line="320"/>
         <source>Auto Run</source>
         <translation>自动运行</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="324"/>
+        <location filename="GUI/TaskExplorer.cpp" line="323"/>
         <source>Skip UAC</source>
         <translation>跳过UAC</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="330"/>
+        <location filename="GUI/TaskExplorer.cpp" line="329"/>
         <source>&amp;Tools</source>
         <translation>&amp;工具</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="331"/>
+        <location filename="GUI/TaskExplorer.cpp" line="330"/>
         <source>&amp;Services</source>
         <translation>&amp;服务</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="332"/>
+        <location filename="GUI/TaskExplorer.cpp" line="331"/>
         <source>Create new Service</source>
         <translation>创建新服务</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="334"/>
+        <location filename="GUI/TaskExplorer.cpp" line="333"/>
         <source>ReLoad all Service</source>
         <translation>重新加载所有服务</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="336"/>
+        <location filename="GUI/TaskExplorer.cpp" line="335"/>
         <source>Service Control Manager Permissions</source>
         <translation>服务控制器权限</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="338"/>
+        <location filename="GUI/TaskExplorer.cpp" line="337"/>
         <source>&amp;Free Memory</source>
         <translation>&amp;释放内存</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="339"/>
+        <location filename="GUI/TaskExplorer.cpp" line="338"/>
         <source>Empty Working set</source>
         <translation>清空工作集</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="340"/>
+        <location filename="GUI/TaskExplorer.cpp" line="339"/>
         <source>Empty Modified pages</source>
         <translation>清空已更改页面</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="341"/>
+        <location filename="GUI/TaskExplorer.cpp" line="340"/>
         <source>Empty Standby std::list</source>
         <translation>清空待定 std::list</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="342"/>
+        <location filename="GUI/TaskExplorer.cpp" line="341"/>
         <source>Empty Priority 0 std::list</source>
         <translation>清空优先级为0的 std::list</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="344"/>
+        <location filename="GUI/TaskExplorer.cpp" line="343"/>
         <source>Combine Pages</source>
         <translation>结合页</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="347"/>
+        <location filename="GUI/TaskExplorer.cpp" line="346"/>
         <source>Persistence Options</source>
         <translation>持久化选项</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="350"/>
+        <location filename="GUI/TaskExplorer.cpp" line="349"/>
         <source>Flush Dns Cache</source>
         <translation>刷新并写入Dns缓存</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="352"/>
+        <location filename="GUI/TaskExplorer.cpp" line="351"/>
         <source>Security Explorer</source>
         <translation>安全浏览器</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="358"/>
+        <location filename="GUI/TaskExplorer.cpp" line="357"/>
         <source>Use Driver to Monitor System</source>
         <translation>使用驱动程序监视系统</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="361"/>
+        <location filename="GUI/TaskExplorer.cpp" line="360"/>
         <source>Monitor ETW Events</source>
         <translation>监视ETW事件</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="366"/>
+        <location filename="GUI/TaskExplorer.cpp" line="365"/>
         <source>Monitor Windows Firewall</source>
         <translation>监视Windows防火墙</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="372"/>
-        <location filename="GUI/TaskExplorer.cpp" line="470"/>
+        <location filename="GUI/TaskExplorer.cpp" line="371"/>
+        <location filename="GUI/TaskExplorer.cpp" line="469"/>
         <source>Monitor Debug Output</source>
         <translation>监视调试输出</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="388"/>
+        <location filename="GUI/TaskExplorer.cpp" line="387"/>
         <source>&amp;Help</source>
         <translation>&amp;帮助</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="389"/>
+        <location filename="GUI/TaskExplorer.cpp" line="388"/>
         <source>Support TaskExplorer on Patreon</source>
         <translation>在Patreon上支持TaskExplorer</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="392"/>
+        <location filename="GUI/TaskExplorer.cpp" line="391"/>
         <source>About ProcessHacker Library</source>
         <translation>关于 ProcessHacker 链接库</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="394"/>
+        <location filename="GUI/TaskExplorer.cpp" line="393"/>
         <source>About the Qt Framework</source>
         <translation>关于 Qt框架</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="396"/>
-        <location filename="GUI/TaskExplorer.cpp" line="1892"/>
+        <location filename="GUI/TaskExplorer.cpp" line="395"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1891"/>
         <source>About TaskExplorer</source>
         <translation>关于 TaskExplorer</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="409"/>
+        <location filename="GUI/TaskExplorer.cpp" line="408"/>
         <source>Refresh Now/Reset Hold</source>
         <translation>立即刷新/重置保持</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="414"/>
+        <location filename="GUI/TaskExplorer.cpp" line="413"/>
         <source>Extremly fast (30Hz)</source>
         <translation>极快(30赫兹)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="415"/>
+        <location filename="GUI/TaskExplorer.cpp" line="414"/>
         <source>Ultra fast (0.1s)</source>
         <translation>超快(0.1秒)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="416"/>
+        <location filename="GUI/TaskExplorer.cpp" line="415"/>
         <source>Very fast (0.25s)</source>
         <translation>很快(0.25秒)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="417"/>
+        <location filename="GUI/TaskExplorer.cpp" line="416"/>
         <source>Fast (0.5s)</source>
         <translation>快(0.5秒)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="418"/>
+        <location filename="GUI/TaskExplorer.cpp" line="417"/>
         <source>Normal (1s)</source>
         <translation>正常(1秒)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="419"/>
+        <location filename="GUI/TaskExplorer.cpp" line="418"/>
         <source>Slow (2s)</source>
         <translation>慢(2秒)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="420"/>
+        <location filename="GUI/TaskExplorer.cpp" line="419"/>
         <source>Very slow (5s)</source>
         <translation>很慢(5秒)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="421"/>
+        <location filename="GUI/TaskExplorer.cpp" line="420"/>
         <source>Extremely slow (10s)</source>
         <translation>极慢(10秒)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="431"/>
+        <location filename="GUI/TaskExplorer.cpp" line="430"/>
         <source>Hold ALL removed items</source>
         <translation>保留所有已被移除的项目</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="436"/>
+        <location filename="GUI/TaskExplorer.cpp" line="435"/>
         <source>Short persistence (2.5s)</source>
         <translation>短持久(2.5秒)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="437"/>
+        <location filename="GUI/TaskExplorer.cpp" line="436"/>
         <source>Normal persistence (5s)</source>
         <translation>正常持久(5秒)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="438"/>
+        <location filename="GUI/TaskExplorer.cpp" line="437"/>
         <source>Long persistence (10s)</source>
         <translation>长持久(10秒)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="439"/>
+        <location filename="GUI/TaskExplorer.cpp" line="438"/>
         <source>Very long persistence (60s)</source>
         <translation>很长持久(60秒)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="440"/>
+        <location filename="GUI/TaskExplorer.cpp" line="439"/>
         <source>Extremely long persistence (5m)</source>
         <translation>极长持久(5分钟)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="441"/>
+        <location filename="GUI/TaskExplorer.cpp" line="440"/>
         <source>Pseudo static persistence (1h)</source>
         <translation>伪静态持久(1小时)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="488"/>
+        <location filename="GUI/TaskExplorer.cpp" line="487"/>
         <source>Search...</source>
         <translation>搜索...</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="593"/>
+        <location filename="GUI/TaskExplorer.cpp" line="592"/>
         <source>TaskExplorer with kernel driver is ready...</source>
         <translation>带内核态驱动运行的TaskExplorer已就绪...</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="612"/>
+        <location filename="GUI/TaskExplorer.cpp" line="611"/>
         <source>TaskExplorer is ready...</source>
         <translation>TaskExplorer已就绪...</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="712"/>
+        <location filename="GUI/TaskExplorer.cpp" line="711"/>
         <source>Do you want to close TaskExplorer?</source>
         <translation>你想要关闭TaskExplorer吗？</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="829"/>
+        <location filename="GUI/TaskExplorer.cpp" line="828"/>
         <source>CPU: %1%    </source>
         <translation>CPU: %1%    </translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="839"/>
+        <location filename="GUI/TaskExplorer.cpp" line="838"/>
         <source>GPU-%1: %2%    </source>
         <translation>GPU-%1: %2%    </translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="856"/>
+        <location filename="GUI/TaskExplorer.cpp" line="855"/>
         <source>Memory: %1/%2/(%3 + %4)    </source>
         <translation>内存: %1/%2/(%3 + %4)    </translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="858"/>
+        <location filename="GUI/TaskExplorer.cpp" line="857"/>
         <source>Memory: %1/%2/%3    </source>
         <translation>内存: %1/%2/%3    </translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="861"/>
+        <location filename="GUI/TaskExplorer.cpp" line="860"/>
         <source>Installed: %1</source>
         <translation>已安装: %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="862"/>
+        <location filename="GUI/TaskExplorer.cpp" line="861"/>
         <source>Swap: %1</source>
         <translation>交换: %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="863"/>
+        <location filename="GUI/TaskExplorer.cpp" line="862"/>
         <source>Commited: %1</source>
         <translation>已提交: %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="864"/>
+        <location filename="GUI/TaskExplorer.cpp" line="863"/>
         <source>Physical: %1</source>
         <translation>物理: %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="871"/>
+        <location filename="GUI/TaskExplorer.cpp" line="870"/>
         <source>R: %1</source>
         <translation>读: %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="873"/>
+        <location filename="GUI/TaskExplorer.cpp" line="872"/>
         <source>W: %1</source>
         <translation>写: %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="877"/>
+        <location filename="GUI/TaskExplorer.cpp" line="876"/>
         <source>FileIO; Read: %1; Write: %2; Other: %3</source>
         <translation>文件读写; 读: %1; 写: %2; 其他: %3</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="878"/>
+        <location filename="GUI/TaskExplorer.cpp" line="877"/>
         <source>MMapIO; Read: %1; Write: %2</source>
         <translation>MMap(内存映射)读写; 读: %1; 写: %2</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="881"/>
+        <location filename="GUI/TaskExplorer.cpp" line="880"/>
         <source>DiskIO; Read: %1; Write: %2</source>
         <translation>分区读写; 读: %1; 写: %2</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="891"/>
+        <location filename="GUI/TaskExplorer.cpp" line="890"/>
         <source>D: %1</source>
         <translation>D: %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="893"/>
+        <location filename="GUI/TaskExplorer.cpp" line="892"/>
         <source>U: %1</source>
         <translation>U: %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="897"/>
+        <location filename="GUI/TaskExplorer.cpp" line="896"/>
         <source>TCP/IP; Download: %1; Upload: %2</source>
         <translation>TCP/IP;下载: %1;上传: %2</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="898"/>
+        <location filename="GUI/TaskExplorer.cpp" line="897"/>
         <source>VPN/RAS; Download: %1; Upload: %2</source>
         <translation>VPN/RAS; 下载: %1; 上传: %2</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="906"/>
+        <location filename="GUI/TaskExplorer.cpp" line="905"/>
         <source>Task Explorer<byte value="xd"/>
 CPU: %1%<byte value="xd"/>
 Ram: %2%</source>
@@ -5959,190 +5988,190 @@ CPU: %1%<byte value="xd"/>
 随机访问内存: %2%</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="909"/>
+        <location filename="GUI/TaskExplorer.cpp" line="908"/>
         <source><byte value="xd"/>
 Swap: %1%</source>
         <translation><byte value="xd"/>
 交换内存: %1%</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1024"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1023"/>
         <source>Operation failed for %1 item(s).</source>
         <translation>操作因 %1 项目而失败。</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1097"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1096"/>
         <source>Do you really want to %1?</source>
         <translation>你真的想要去 %1 吗？</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1155"/>
-        <location filename="GUI/TaskExplorer.cpp" line="1242"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1154"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1241"/>
         <source>Failed to %1, due to: %2</source>
         <translation>由于 %2 ,不能 %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1166"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1165"/>
         <source>Users (%1)</source>
         <translation>用户 (%1)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1180"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1179"/>
         <source>Connect</source>
         <translation>连接</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1181"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1180"/>
         <source>Disconnect</source>
         <translation>断开连接</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1182"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1181"/>
         <source>Logoff</source>
         <translation>注销</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1190"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1189"/>
         <source>%1: %2 (%3)</source>
         <translation>%1: %2 (%3)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1217"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1216"/>
         <source>Connect to session, enter Password:</source>
         <translation>要连接到会话，输入密码:</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1490"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1489"/>
         <source>Memory opertion failed; Error: %1</source>
         <translation>内存操作失败; 错误: %1</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1502"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1501"/>
         <source>Found %1 hidden processes and added them to the process std::list.</source>
         <translation>发现了 %1 个隐藏进程并且将它们添加到了进程 std::list.</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1504"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1503"/>
         <source>No hidden processes found.</source>
         <translation>没有找到隐藏进程。</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1711"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1710"/>
         <source>Graph background</source>
         <translation>图表背景</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1712"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1711"/>
         <source>Graph text</source>
         <translation>图表文本</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1714"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1713"/>
         <source>Plot background</source>
         <translation>绘图背景</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1715"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1714"/>
         <source>Plot text</source>
         <translation>绘图文本</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1716"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1715"/>
         <source>Plot grid</source>
         <translation>绘图格</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1718"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1717"/>
         <source>List grid color</source>
         <translation>列表格颜色</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1719"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1718"/>
         <source>Default background</source>
         <translation>默认背景</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1722"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1721"/>
         <source>New items</source>
         <translation>新栏目</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1723"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1722"/>
         <source>Removed items</source>
         <translation>已移除栏目</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1726"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1725"/>
         <source>Dangerous process</source>
         <translation>危险进程</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1728"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1727"/>
         <source>System processes</source>
         <translation>系统进程</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1729"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1728"/>
         <source>Current user processes</source>
         <translation>当前用户进程</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1730"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1729"/>
         <source>Service processes</source>
         <translation>服务进程</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1732"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1731"/>
         <source>Sandboxed processes</source>
         <translation>沙盒化进程</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1733"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1732"/>
         <source>Job processes</source>
         <translation>Job进程</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1734"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1733"/>
         <source>Pico processes</source>
         <translation>Pico进程(Windows Linux子系统结构精缩进程)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1735"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1734"/>
         <source>Immersive processes</source>
         <translation>应用商店进程</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1736"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1735"/>
         <source>.NET processes</source>
         <translation>.NET进程</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1738"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1737"/>
         <source>Elevated processes</source>
         <translation>已提权进程</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1740"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1739"/>
         <source>Kernel Services (Driver)</source>
         <translation>内核服务(驱动程序)</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1741"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1740"/>
         <source>Gui threads</source>
         <translation>图形用户界面线程</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1742"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1741"/>
         <source>Inherited handles</source>
         <translation>继承所得句柄</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1743"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1742"/>
         <source>Protected handles/Critical tasks</source>
         <translation>受保护句柄/关键任务</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1746"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1745"/>
         <source>Executable memory</source>
         <translation>可执行内存</translation>
     </message>
@@ -6155,7 +6184,7 @@ Swap: %1%</source>
         <translation type="vanished">&lt;p&gt;TaskExplorer 是一个强大的多功能的，旨在帮助你监视系统资源、调试软件与检测恶意软件的任务管理器。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;在Windows上 TaskExplorer 由 ProsessHacker 链接库 提供支持。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;访问 &lt;a href=&quot;https://github.com/DavidXanatos/TaskExplorer&quot;&gt;TaskExplorer 的 github仓库&lt;/a&gt; 若要获取更多信息。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Icons from &lt;a href=&quot;https://icons8.com&quot;&gt;icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="331"/>
+        <location filename="main.cpp" line="343"/>
         <source>You are attempting to run the 32-bit version of Task Explorer on 64-bit Windows. Most features will not work correctly.
 
 Please run the 64-bit version of Task Explorer instead.</source>
@@ -6164,164 +6193,194 @@ Please run the 64-bit version of Task Explorer instead.</source>
 请运行64位版本的Task Explorer来替代。</translation>
     </message>
     <message>
-        <location filename="main.cpp" line="245"/>
+        <location filename="main.cpp" line="257"/>
         <source>Disable KTaskExplorer driver. Note: this will limit the aplications functionality!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="929"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="939"/>
         <source>Updating DynData</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1876"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1875"/>
         <source>&lt;p&gt;TaskExplorer is a powerfull multi-purpose Task Manager that helps you monitor system resources, debug software and detect malware.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;On Windows TaskExplorer is powered by the ProsessHacker Library.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Visit &lt;a href=&quot;https://github.com/DavidXanatos/TaskExplorer&quot;&gt;TaskExplorer on github&lt;/a&gt; for more information.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Config Dir: %1&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Icons from &lt;a href=&quot;https://icons8.com&quot;&gt;icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="main.cpp" line="211"/>
+        <location filename="main.cpp" line="223"/>
         <source>Failed to update DynData, %1, Error: 0x%2 (%3).
 Do you want to continue anyways (Ok), or terminate (Cancel)?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="main.cpp" line="219"/>
+        <location filename="main.cpp" line="231"/>
         <source>The current DynData for the KTaskExplorer driver does not yet supported on your windows kernel version.&lt;br /&gt;You can check for &lt;a href=&quot;https://github.com/DavidXanatos/TaskExplorer/releases&quot;&gt;TaskExplorer updates on github&lt;/a&gt;, or grab the latest ksidyn.bin and ksidyn.sig from &lt;a href=&quot;https://systeminformer.sourceforge.io/downloads&quot;&gt;the latest SystemInformer&lt;/a&gt; and put them in the instalaltion directors next to KSystemInformer.sys.&lt;br /&gt;Instalation Directory: %4&lt;br /&gt;&lt;br /&gt;Operating System Details:&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Windows %1&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Windows Kernel %2&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TaskExplorer %3&lt;br /&gt;&lt;br /&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="main.cpp" line="232"/>
+        <location filename="main.cpp" line="244"/>
         <source>Update did not help, do you want to continue anyways (Ok), or terminate (Cancel)?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="main.cpp" line="234"/>
+        <location filename="main.cpp" line="246"/>
         <source>Do you want to try to download updated DynData (Yes), start without the driver (No), or terminate (Cancel)?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="main.cpp" line="239"/>
+        <location filename="main.cpp" line="251"/>
         <source>Failed to load KTaskExplorer driver, %1, Error: 0x%2 (%3).
 Do you want to continue anyways (Ok), or terminate (Cancel)?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="946"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="956"/>
         <source>Failed to open archive.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="958"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="968"/>
         <source>DynData not found in archive.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="981"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="991"/>
         <source>Failed to extreact files.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="991"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="1001"/>
         <source>Updated DynData successfully</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="1004"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="1014"/>
         <source>Latest SI build already downloaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="1019"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="1029"/>
         <source>Downloading latest SI build</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="1026"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="1036"/>
         <source>Download Failed, Error: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="1032"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="1042"/>
         <source>Failed to open file for writing.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="1038"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="1048"/>
         <source>Successfully Downloaded latest SI build</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="1059"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="1069"/>
         <source>Update Check Failed, Error: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="1068"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="1078"/>
         <source>Update Check Failed, Error: Unrecognized Reply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="315"/>
-        <source>Use KSystemInformer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1871"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1870"/>
         <source>&lt;h3&gt;About TaskExplorer&lt;/h3&gt;&lt;p&gt;Version %1&lt;/p&gt;&lt;p&gt;Copyright (C) 2019-2025 David Xanatos (xanasoft.com)&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1804"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1803"/>
         <source>Reset Columns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1805"/>
+        <location filename="GUI/TaskExplorer.cpp" line="116"/>
+        <source>---</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/TaskExplorer.cpp" line="117"/>
+        <source>--</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/TaskExplorer.cpp" line="118"/>
+        <source>-</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/TaskExplorer.cpp" line="119"/>
+        <source>~</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/TaskExplorer.cpp" line="120"/>
+        <source>+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/TaskExplorer.cpp" line="121"/>
+        <source>++</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/TaskExplorer.cpp" line="312"/>
+        <source>Driver Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="GUI/TaskExplorer.cpp" line="1804"/>
         <source>Copy Cell</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1806"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1805"/>
         <source>Copy Row</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1807"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1806"/>
         <source>Copy Panel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1808"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1807"/>
         <source>Case Sensitive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1809"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1808"/>
         <source>RegExp</source>
         <translation type="unfinished">注册表浏览</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1810"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1809"/>
         <source>Highlight</source>
         <translation type="unfinished">高亮</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1811"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1810"/>
         <source>Close</source>
         <translation type="unfinished">关闭</translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1812"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1811"/>
         <source>&amp;Find ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="GUI/TaskExplorer.cpp" line="1813"/>
+        <location filename="GUI/TaskExplorer.cpp" line="1812"/>
         <source>All columns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="main.cpp" line="252"/>
+        <location filename="main.cpp" line="264"/>
         <source>Failed to update DynData, %1.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10712,87 +10771,88 @@ If you save the recovery information using this program, the additional failure 
         <translation>Task Explorer - 内核驱动</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="40"/>
-        <location filename="Forms/DriverWindow.ui" line="154"/>
-        <location filename="Forms/DriverWindow.ui" line="228"/>
-        <location filename="Forms/DriverWindow.ui" line="235"/>
+        <location filename="Forms/DriverWindow.ui" line="53"/>
+        <source>Driver Status:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Forms/DriverWindow.ui" line="76"/>
+        <location filename="Forms/DriverWindow.ui" line="83"/>
+        <location filename="Forms/DriverWindow.ui" line="107"/>
+        <location filename="Forms/DriverWindow.ui" line="124"/>
+        <location filename="Forms/DriverWindow.ui" line="175"/>
         <source>TextLabel</source>
         <translation>文本标签</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="47"/>
+        <location filename="Forms/DriverWindow.ui" line="141"/>
         <source>Use Kernel Driver</source>
         <translation>使用内核驱动</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="80"/>
+        <location filename="Forms/DriverWindow.ui" line="165"/>
+        <source>DynData Status:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Connect</source>
-        <translation>连接</translation>
+        <translation type="vanished">连接</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="88"/>
         <source>Unrestricted (unsecure)</source>
-        <translation>不受限制（不安全）</translation>
+        <translation type="vanished">不受限制（不安全）</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="93"/>
         <source>Require Debug Privilege</source>
-        <translation>需要调试特权</translation>
+        <translation type="vanished">需要调试特权</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="98"/>
         <source>Require Trusted Signature</source>
-        <translation>需要受信任的签名</translation>
+        <translation type="vanished">需要受信任的签名</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="103"/>
         <source>Require Signature and Privilege</source>
-        <translation>需要签名和特权</translation>
+        <translation type="vanished">需要签名和特权</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="111"/>
         <source>Driver access restrictions</source>
-        <translation>驱动访问限制</translation>
+        <translation type="vanished">驱动访问限制</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="121"/>
         <source>Driver File:</source>
-        <translation>驱动文件:</translation>
+        <translation type="vanished">驱动文件:</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="144"/>
+        <location filename="Forms/DriverWindow.ui" line="131"/>
         <source>Verification Status:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="161"/>
         <source>Driver (service) Status:</source>
-        <translation>驱动（服务）状态:</translation>
+        <translation type="vanished">驱动（服务）状态:</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="171"/>
+        <location filename="Forms/DriverWindow.ui" line="90"/>
         <source>Connection Status:</source>
         <translation>连接状态:</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="188"/>
+        <location filename="Forms/DriverWindow.ui" line="148"/>
         <source>Device Name:</source>
         <translation>设备名称:</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="198"/>
         <source>Auto Selection</source>
-        <translation>自动选择</translation>
+        <translation type="vanished">自动选择</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="205"/>
+        <location filename="Forms/DriverWindow.ui" line="114"/>
         <source>OS Driver Signing Policy:</source>
         <translation>操作系统驱动签名策略:</translation>
     </message>
     <message>
-        <location filename="Forms/DriverWindow.ui" line="221"/>
         <source>Start/Stop</source>
-        <translation>启动/停止</translation>
+        <translation type="vanished">启动/停止</translation>
     </message>
 </context>
 <context>
@@ -10841,7 +10901,7 @@ If you save the recovery information using this program, the additional failure 
 <context>
     <name>QObject</name>
     <message>
-        <location filename="API/Windows/ProcessHacker.cpp" line="694"/>
+        <location filename="API/Windows/ProcessHacker.cpp" line="680"/>
         <source>The kernel driver file &apos;%1&apos; was not found.</source>
         <translation>驱动程序文件 &apos;%1&apos; 未被找到。</translation>
     </message>

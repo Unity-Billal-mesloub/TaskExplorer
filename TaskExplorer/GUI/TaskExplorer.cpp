@@ -5,7 +5,7 @@
 #include "../API/Windows/WindowsAPI.h"
 #include "../API/Windows/ProcessHacker/RunAs.h"
 #include "SecurityExplorer.h"
-//#include "DriverWindow.h"
+#include "DriverWindow.h"
 #include "../API/Windows/WinAdmin.h"
 extern "C" {
 #include <winsta.h>
@@ -113,14 +113,14 @@ CTaskExplorer::CTaskExplorer(QWidget *parent)
 		KPH_LEVEL level = KphLevelEx(FALSE);
 		switch (level)
 		{
-			case KphLevelNone: sLevel = tr("None"); break;
-			case KphLevelMin: sLevel = tr("Minimal"); break;
-			case KphLevelLow: sLevel = tr("Low"); break;
-			case KphLevelMed: sLevel = tr("Medium"); break;
-			case KphLevelHigh: sLevel = tr("High"); break;
-			case KphLevelMax: sLevel = tr("Maximum"); break;
+			case KphLevelNone: sLevel = tr("---"); break;
+			case KphLevelMin: sLevel =	tr("--"); break;
+			case KphLevelLow: sLevel =	tr("-"); break;
+			case KphLevelMed: sLevel =	tr("~"); break;
+			case KphLevelHigh: sLevel = tr("+"); break;
+			case KphLevelMax: sLevel =	tr("++"); break;
 		}
-		appTitle.append(tr(" - [KSI Level %1]").arg(sLevel));
+		appTitle.append(tr(" - [%1KSI%2]").arg(g_KsiDynDataLoaded ? "" : tr("Limited ")).arg(sLevel));
 	}
 #endif
 
@@ -309,13 +309,12 @@ CTaskExplorer::CTaskExplorer(QWidget *parent)
 	m_pMenuOptions = menuBar()->addMenu(tr("&Options"));
 		m_pMenuSettings = m_pMenuOptions->addAction(MakeActionIcon(":/Actions/Settings"), tr("Settings"), this, SLOT(OnSettings()));
 #ifdef WIN32
-		//m_pMenuDriverConf = m_pMenuOptions->addAction(MakeActionIcon(":/Actions/Driver"), tr("Driver Options"), this, SLOT(OnDriverConf()));
-		//m_pMenuDriverConf->setEnabled(!PhIsExecutingInWow64());
+		m_pMenuDriverConf = m_pMenuOptions->addAction(MakeActionIcon(":/Actions/Driver"), tr("Driver Options"), this, SLOT(OnDriverConf()));
 
-		m_pMenuUseDriver = m_pMenuOptions->addAction(tr("Use KSystemInformer"), this, SLOT(OnUseDriver()));
-		m_pMenuUseDriver->setEnabled(theAPI->RootAvaiable());
-		m_pMenuUseDriver->setCheckable(true);
-		m_pMenuUseDriver->setChecked(theConf->GetBool("OptionsKSI/KsiEnable", true));
+		//m_pMenuUseDriver = m_pMenuOptions->addAction(tr("Use KSystemInformer"), this, SLOT(OnUseDriver()));
+		//m_pMenuUseDriver->setEnabled(theAPI->RootAvaiable());
+		//m_pMenuUseDriver->setCheckable(true);
+		//m_pMenuUseDriver->setChecked(theConf->GetBool("OptionsKSI/KsiEnable", true));
 
         m_pMenuOptions->addSeparator();
         m_pMenuAutoRun = m_pMenuOptions->addAction(tr("Auto Run"), this, SLOT(OnAutoRun()));
@@ -1316,13 +1315,13 @@ void CTaskExplorer::OnSettings()
 	pSettingsWindow->show();
 }
 
-//void CTaskExplorer::OnDriverConf()
-//{
-//#ifdef WIN32
-//	CDriverWindow* pDriverWindow = new CDriverWindow();
-//	pDriverWindow->show();
-//#endif
-//}
+void CTaskExplorer::OnDriverConf()
+{
+#ifdef WIN32
+	CDriverWindow* pDriverWindow = new CDriverWindow();
+	pDriverWindow->show();
+#endif
+}
 
 void CTaskExplorer::OnMessage(const QString& Message)
 {
@@ -1378,10 +1377,10 @@ void CTaskExplorer::ResetAll()
 	QTimer::singleShot(0, this, SLOT(UpdateAll()));
 }
 
-void CTaskExplorer::OnUseDriver()
-{
-	theConf->SetValue("OptionsKSI/KsiEnable", m_pMenuUseDriver->isChecked());
-}
+//void CTaskExplorer::OnUseDriver()
+//{
+//	theConf->SetValue("OptionsKSI/KsiEnable", m_pMenuUseDriver->isChecked());
+//}
 
 void CTaskExplorer::OnAutoRun()
 {

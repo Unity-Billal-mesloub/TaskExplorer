@@ -243,7 +243,7 @@
     <ClInclude Include="..\src\qwt_transform.h" />
     <ClInclude Include="..\src\qwt_vectorfield_symbol.h" />
     <ClInclude Include="..\src\qwt_weeding_curve_fitter.h" />
-    <ClInclude Include="..\src\qwt_widget_overlay.h" />
+    <QtMoc Include="..\src\qwt_widget_overlay.h" />
     <QtMoc Include="..\src\qwt_wheel.h" />
     <QtMoc Include="..\src\qwt_thermo.h" />
     <QtMoc Include="..\src\qwt_text_label.h" />
