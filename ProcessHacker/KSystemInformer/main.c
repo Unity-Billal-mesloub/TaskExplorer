@@ -85,7 +85,6 @@ VOID KphpDriverCleanup(
 
 #ifdef IS_KTE
     KteStopWorkerThread();
-    KteCleanupVerificationQueue();
 #endif
     KphDebugInformerStop();
     KphRegistryInformerStop();
@@ -96,6 +95,9 @@ VOID KphpDriverCleanup(
     KphProcessInformerStop();
     KphFltUnregister();
     KphCidCleanup();
+#ifdef IS_KTE
+    KteCleanupVerificationQueue();
+#endif 
     KphCleanupDynData();
     KphCleanupVerify();
     KphCleanupHashing();
@@ -279,6 +281,18 @@ NTSTATUS DriverEntry(
         goto Exit;
     }
 
+#ifdef IS_KTE
+    status = KteInitializeVerificationQueue();
+    if (!NT_SUCCESS(status))
+    {
+        KphTracePrint(TRACE_LEVEL_ERROR,
+            GENERAL,
+            "Failed to initialize verification queue: %!STATUS!",
+            status);
+        goto Exit;
+    }
+#endif
+
     KphInitializeDynData();
 
     KphInitializeProtection();
@@ -399,16 +413,6 @@ NTSTATUS DriverEntry(
     }
 
 #ifdef IS_KTE
-    status = KteInitializeVerificationQueue();
-    if (!NT_SUCCESS(status))
-    {
-        KphTracePrint(TRACE_LEVEL_ERROR,
-                      GENERAL,
-                      "Failed to initialize verification queue: %!STATUS!",
-                      status);
-        goto Exit;
-    }
-
     status = KteStartWorkerThread();
     if (!NT_SUCCESS(status))
     {
